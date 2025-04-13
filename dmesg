@@ -1,0 +1,2009 @@
+[    5.433865] Booting Linux on physical CPU 0x0000000000 [0x412fd050]
+[    5.433902] Linux version 5.10.160-rockchip-rk356x (root@orangepi5) (aarch64-linux-gnu-gcc (Ubuntu 11.4.0-1ubuntu1~22.04) 11.4.0, GNU ld (GNU Binutils for Ubuntu) 2.38) #1.0.6 SMP Thu Jun 20 15:37:40 CST 2024
+[    5.448362] Machine model: Rockchip RK3566 Orange Pi CM4 Board
+[    5.448635] earlycon: uart8250 at MMIO32 0x00000000fe660000 (options '')
+[    5.452193] printk: bootconsole [uart8250] enabled
+[    5.455473] efi: UEFI not found.
+[    5.459602] OF: fdt: Reserved memory: failed to reserve memory for node 'drm-logo@00000000': base 0x0000000000000000, size 0 MiB
+[    5.460729] OF: fdt: Reserved memory: failed to reserve memory for node 'drm-cubic-lut@00000000': base 0x0000000000000000, size 0 MiB
+[    5.512715] Zone ranges:
+[    5.512980]   DMA      [mem 0x0000000000200000-0x000000003fffffff]
+[    5.513583]   DMA32    empty
+[    5.513868]   Normal   empty
+[    5.514150] Movable zone start for each node
+[    5.514561] Early memory node ranges
+[    5.514909]   node   0: [mem 0x0000000000200000-0x000000003fffffff]
+[    5.515517] Initmem setup node 0 [mem 0x0000000000200000-0x000000003fffffff]
+[    5.516192] On node 0 totalpages: 261632
+[    5.516573]   DMA zone: 4088 pages used for memmap
+[    5.517033]   DMA zone: 0 pages reserved
+[    5.517412]   DMA zone: 261632 pages, LIFO batch:63
+[    5.526223] cma: Reserved 128 MiB at 0x0000000036c00000
+[    5.526859] psci: probing for conduit method from DT.
+[    5.527359] psci: PSCIv1.1 detected in firmware.
+[    5.527805] psci: Using standard PSCI v0.2 function IDs
+[    5.528309] psci: MIGRATE_INFO_TYPE not supported.
+[    5.528774] psci: SMC Calling Convention v1.2
+[    5.529739] percpu: Embedded 32 pages/cpu s93544 r8192 d29336 u131072
+[    5.530403] pcpu-alloc: s93544 r8192 d29336 u131072 alloc=32*4096
+[    5.530995] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3 
+[    5.531585] Detected VIPT I-cache on CPU0
+[    5.532047] CPU features: detected: GIC system register CPU interface
+[    5.532668] CPU features: detected: Virtualization Host Extensions
+[    5.533270] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    5.533953] alternatives: patching kernel code
+[    5.534947] Built 1 zonelists, mobility grouping on.  Total pages: 257544
+[    5.535610] Kernel command line: root=UUID=d450b329-3e0c-492a-a970-9ac97d0527c8 rootwait rootfstype=ext4 splash plymouth.ignore-serial-consoles console=ttyFIQ0 console=tty1 consoleblank=0 loglevel=1 ubootpart=02d435b6-3323-0140-8da1-512d45f483f5 usb-storage.quirks= cma=128M debug  cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory swapaccount=1 earlycon=uart8250,mmio32,0xfe660000
+[    5.540214] Dentry cache hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    5.541145] Inode-cache hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    5.541874] mem auto-init: stack:off, heap alloc:off, heap free:off
+[    5.562533] Memory: 839456K/1046528K available (16960K kernel code, 3524K rwdata, 6568K rodata, 7040K init, 646K bss, 76000K reserved, 131072K cma-reserved)
+[    5.564093] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    5.564778] ftrace: allocating 65144 entries in 255 pages
+[    5.731126] ftrace: allocated 255 pages with 8 groups
+
+[    5.731812] **********************************************************
+[    5.732438] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    5.733062] **                                                      **
+[    5.733685] ** trace_printk() being used. Allocating extra memory.  **
+[    5.734309] **                                                      **
+[    5.734933] ** This means that this is a DEBUG kernel and it is     **
+[    5.735556] ** unsafe for production use.                           **
+[    5.736179] **                                                      **
+[    5.736802] ** If you see this message and you are not debugging    **
+[    5.737426] ** the kernel, report this immediately to your vendor!  **
+[    5.738049] **                                                      **
+[    5.738673] **   NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE   **
+[    5.739296] **********************************************************
+[    5.741080] rcu: Hierarchical RCU implementation.
+[    5.741542] rcu: 	RCU event tracing is enabled.
+[    5.741981] rcu: 	RCU restricting CPUs from NR_CPUS=8 to nr_cpu_ids=4.
+[    5.742607] 	Rude variant of Tasks RCU enabled.
+[    5.743042] 	Tracing variant of Tasks RCU enabled.
+[    5.743503] rcu: RCU calculated value of scheduler-enlistment delay is 30 jiffies.
+[    5.744227] rcu: Adjusting geometry for rcu_fanout_leaf=16, nr_cpu_ids=4
+[    5.753467] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    5.756981] GICv3: GIC: Using split EOI/Deactivate mode
+[    5.757498] GICv3: 320 SPIs implemented
+[    5.757870] GICv3: 0 Extended SPIs implemented
+[    5.758355] GICv3: Distributor has no Range Selector support
+[    5.758910] GICv3: 16 PPIs implemented
+[    5.759315] GICv3: CPU0: found redistributor 0 region 0:0x00000000fd460000
+[    5.760206] ITS [mem 0xfd440000-0xfd45ffff]
+[    5.760720] ITS@0x00000000fd440000: allocated 8192 Devices @2b50000 (indirect, esz 8, psz 64K, shr 0)
+[    5.761660] ITS@0x00000000fd440000: allocated 32768 Interrupt Collections @2b60000 (flat, esz 2, psz 64K, shr 0)
+[    5.762641] ITS: using cache flushing for cmd queue
+[    5.763701] GICv3: using LPI property table @0x0000000002b70000
+[    5.764453] GIC: using cache flushing for LPI property table
+[    5.765007] GICv3: CPU0: using allocated LPI pending table @0x0000000002b80000
+[    5.813751] arch_timer: cp15 timer(s) running at 24.00MHz (phys).
+[    5.814363] clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0x588fe9dc0, max_idle_ns: 440795202592 ns
+[    5.815409] sched_clock: 56 bits at 24MHz, resolution 41ns, wraps every 4398046511097ns
+[    5.818163] Console: colour dummy device 80x25
+[    5.818613] printk: console [tty1] enabled
+[    5.819024] printk: bootconsole [uart8250] disabled
+[    5.819547] Calibrating delay loop (skipped), value calculated using timer frequency.. 48.00 BogoMIPS (lpj=80000)
+[    5.819585] pid_max: default: 32768 minimum: 301
+[    5.819766] LSM: Security Framework initializing
+[    5.819880] Mount-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    5.819915] Mountpoint-cache hash table entries: 2048 (order: 2, 16384 bytes, linear)
+[    5.823437] rcu: Hierarchical SRCU implementation.
+[    5.824914] Platform MSI: interrupt-controller@fd440000 domain created
+[    5.825641] PCI/MSI: /interrupt-controller@fd400000/interrupt-controller@fd440000 domain created
+[    5.826197] EFI services will not be available.
+[    5.826910] smp: Bringing up secondary CPUs ...
+[    5.828907] Detected VIPT I-cache on CPU1
+[    5.828965] GICv3: CPU1: found redistributor 100 region 0:0x00000000fd480000
+[    5.829002] GICv3: CPU1: using allocated LPI pending table @0x0000000002b90000
+[    5.829077] CPU1: Booted secondary processor 0x0000000100 [0x412fd050]
+[    5.831178] Detected VIPT I-cache on CPU2
+[    5.831236] GICv3: CPU2: found redistributor 200 region 0:0x00000000fd4a0000
+[    5.831271] GICv3: CPU2: using allocated LPI pending table @0x0000000002ba0000
+[    5.831337] CPU2: Booted secondary processor 0x0000000200 [0x412fd050]
+[    5.833512] Detected VIPT I-cache on CPU3
+[    5.833567] GICv3: CPU3: found redistributor 300 region 0:0x00000000fd4c0000
+[    5.833602] GICv3: CPU3: using allocated LPI pending table @0x0000000002bb0000
+[    5.833664] CPU3: Booted secondary processor 0x0000000300 [0x412fd050]
+[    5.833892] smp: Brought up 1 node, 4 CPUs
+[    5.834088] SMP: Total of 4 processors activated.
+[    5.834109] CPU features: detected: Privileged Access Never
+[    5.834129] CPU features: detected: User Access Override
+[    5.834150] CPU features: detected: 32-bit EL0 Support
+[    5.834169] CPU features: detected: Common not Private translations
+[    5.834188] CPU features: detected: RAS Extension Support
+[    5.834207] CPU features: detected: Data cache clean to the PoU not required for I/D coherence
+[    5.834233] CPU features: detected: CRC32 instructions
+[    5.834251] CPU features: detected: Speculative Store Bypassing Safe (SSBS)
+[    5.834274] CPU features: detected: 32-bit EL1 Support
+[    5.834294] CPU features: detected: RCpc load-acquire (LDAPR)
+[    5.834433] CPU: All CPU(s) started at EL2
+[    5.836417] devtmpfs: initialized
+[    5.879580] Registered cp15_barrier emulation handler
+[    5.879635] Registered setend emulation handler
+[    5.879668] KASLR disabled due to lack of seed
+[    5.879991] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370867519511994 ns
+[    5.880044] futex hash table entries: 1024 (order: 4, 65536 bytes, linear)
+[    5.886545] pinctrl core: initialized pinctrl subsystem
+[    5.887113] regulator-dummy: no parameters, enabled
+[    5.887651] DMI not present or invalid.
+[    5.888443] NET: Registered protocol family 16
+[    5.892452] DMA: preallocated 128 KiB GFP_KERNEL pool for atomic allocations
+[    5.892754] DMA: preallocated 128 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    5.892921] audit: initializing netlink subsys (disabled)
+[    5.893330] audit: type=2000 audit(0.076:1): state=initialized audit_enabled=0 res=1
+[    5.897703] Registered FIQ tty driver
+[    5.898438] thermal_sys: Registered thermal governor 'fair_share'
+[    5.898448] thermal_sys: Registered thermal governor 'step_wise'
+[    5.898476] thermal_sys: Registered thermal governor 'user_space'
+[    5.898499] thermal_sys: Registered thermal governor 'power_allocator'
+[    5.899047] thermal thermal_zone1: power_allocator: sustainable_power will be estimated
+[    5.899211] cpuidle: using governor menu
+[    5.900177] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    5.900470] ASID allocator initialised with 65536 entries
+[    5.903953] ramoops: dmesg-0	0x20000@0x0000000000110000
+[    5.904106] ramoops: console	0x80000@0x0000000000130000
+[    5.904167] ramoops: pmsg	0x50000@0x00000000001b0000
+[    5.905049] printk: console [ramoops-1] enabled
+[    5.905078] pstore: Registered ramoops as persistent store backend
+[    5.905104] ramoops: using 0xf0000@0x110000, ecc: 0
+[    5.984931] rockchip-gpio fdd60000.gpio0: probed /pinctrl/gpio0@fdd60000
+[    5.986074] rockchip-gpio fe740000.gpio1: probed /pinctrl/gpio1@fe740000
+[    5.987040] rockchip-gpio fe750000.gpio2: probed /pinctrl/gpio2@fe750000
+[    5.987997] rockchip-gpio fe760000.gpio3: probed /pinctrl/gpio3@fe760000
+[    5.989119] rockchip-gpio fe770000.gpio4: probed /pinctrl/gpio4@fe770000
+[    5.989426] rockchip-pinctrl pinctrl: probed pinctrl
+[    6.027223] HugeTLB registered 1.00 GiB page size, pre-allocated 0 pages
+[    6.027278] HugeTLB registered 32.0 MiB page size, pre-allocated 0 pages
+[    6.027306] HugeTLB registered 2.00 MiB page size, pre-allocated 0 pages
+[    6.027333] HugeTLB registered 64.0 KiB page size, pre-allocated 0 pages
+[    6.096329] raid6: neonx8   gen()  1363 MB/s
+[    6.153181] raid6: neonx8   xor()  1088 MB/s
+[    6.210065] raid6: neonx4   gen()  1406 MB/s
+[    6.266939] raid6: neonx4   xor()  1070 MB/s
+[    6.323824] raid6: neonx2   gen()  1272 MB/s
+[    6.380690] raid6: neonx2   xor()   973 MB/s
+[    6.437570] raid6: neonx1   gen()  1032 MB/s
+[    6.494444] raid6: neonx1   xor()   804 MB/s
+[    6.551357] raid6: int64x8  gen()   352 MB/s
+[    6.608224] raid6: int64x8  xor()   234 MB/s
+[    6.665120] raid6: int64x4  gen()   439 MB/s
+[    6.721959] raid6: int64x4  xor()   243 MB/s
+[    6.778832] raid6: int64x2  gen()   890 MB/s
+[    6.835716] raid6: int64x2  xor()   481 MB/s
+[    6.892612] raid6: int64x1  gen()   643 MB/s
+[    6.949482] raid6: int64x1  xor()   344 MB/s
+[    6.949510] raid6: using algorithm neonx4 gen() 1406 MB/s
+[    6.949534] raid6: .... xor() 1070 MB/s, rmw enabled
+[    6.949556] raid6: using neon recovery algorithm
+[    6.951561] fiq_debugger fiq_debugger.0: IRQ fiq not found
+[    6.951606] fiq_debugger fiq_debugger.0: IRQ wakeup not found
+[    6.951640] fiq_debugger_probe: could not install nmi irq handler
+[    6.952558] printk: console [ttyFIQ0] enabled
+[    6.952928] Registered fiq debugger ttyFIQ0
+[    6.953778] vcc12v_dcin: 12000 mV, enabled
+[    6.954142] reg-fixed-voltage vcc12v-dcin-regulator: vcc12v_dcin supplying 12000000uV
+[    6.954393] reg-fixed-voltage vcc-5v-regulator: Looking up vin-supply from device tree
+[    6.954440] vcc_5v: supplied by vcc12v_dcin
+[    6.954477] vcc12v_dcin: could not add device link regulator.2: -ENOENT
+[    6.954568] vcc_5v: 5000 mV, enabled
+[    6.954894] reg-fixed-voltage vcc-5v-regulator: vcc_5v supplying 5000000uV
+[    6.955128] vbus: 5000 mV, enabled
+[    6.955403] reg-fixed-voltage vbus: vbus supplying 5000000uV
+[    6.955675] reg-fixed-voltage vcc3v3-pcie-regulator: Looking up vin-supply from device tree
+[    6.955723] vcc3v3_pcie: supplied by vcc12v_dcin
+[    6.955767] vcc12v_dcin: could not add device link regulator.4: -ENOENT
+[    6.955867] vcc3v3_pcie: 3300 mV, enabled
+[    6.956194] reg-fixed-voltage vcc3v3-pcie-regulator: vcc3v3_pcie supplying 3300000uV
+[    6.956453] reg-fixed-voltage vcc3v3-sys: Looking up vin-supply from device tree
+[    6.956500] vcc3v3_sys: supplied by vbus
+[    6.956533] vbus: could not add device link regulator.5: -ENOENT
+[    6.956633] vcc3v3_sys: 3300 mV, enabled
+[    6.956926] reg-fixed-voltage vcc3v3-sys: vcc3v3_sys supplying 3300000uV
+[    6.957152] reg-fixed-voltage vcc5v0-sys: Looking up vin-supply from device tree
+[    6.957198] vcc5v0_sys: supplied by vbus
+[    6.957239] vbus: could not add device link regulator.6: -ENOENT
+[    6.957357] vcc5v0_sys: 5000 mV, enabled
+[    6.957647] reg-fixed-voltage vcc5v0-sys: vcc5v0_sys supplying 5000000uV
+[    6.957884] reg-fixed-voltage vcc5v0-usb: Looking up vin-supply from device tree
+[    6.957931] vcc5v0_usb: supplied by vbus
+[    6.957963] vbus: could not add device link regulator.7: -ENOENT
+[    6.958050] vcc5v0_usb: 5000 mV, enabled
+[    6.958377] reg-fixed-voltage vcc5v0-usb: vcc5v0_usb supplying 5000000uV
+[    6.958629] vcc_camera_ov5647: 3300 mV, enabled
+[    6.958962] reg-fixed-voltage vcc-camera-ov5647: vcc_camera_ov5647 supplying 3300000uV
+[    6.959188] vcc_sd: 3300 mV, enabled
+[    6.959449] reg-fixed-voltage vcc-sd: Looking up vin-supply from device tree
+[    6.959495] vcc_sd: supplied by vcc3v3_sys
+[    6.959654] reg-fixed-voltage vcc-sd: vcc_sd supplying 3300000uV
+[    6.959879] vccio_phy: 1800 mV, enabled
+[    6.960199] reg-fixed-voltage vcc-phy-regulator: vccio_phy supplying 1800000uV
+[    6.960716] vcc5v0_otg: no parameters, enabled
+[    6.961034] reg-fixed-voltage vcc5v0-otg-regulator: vcc5v0_otg supplying 0uV
+[    6.962324] iommu: Default domain type: Translated 
+[    6.962675] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up npu-supply from device tree
+[    6.962750] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up npu-supply property in node /power-management@fdd90000/power-controller failed
+[    6.964157] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up vpu-supply from device tree
+[    6.964233] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up vpu-supply property in node /power-management@fdd90000/power-controller failed
+[    6.964879] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up rga-supply from device tree
+[    6.964952] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up rga-supply property in node /power-management@fdd90000/power-controller failed
+[    6.966925] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up rkvenc-supply from device tree
+[    6.967001] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up rkvenc-supply property in node /power-management@fdd90000/power-controller failed
+[    6.967630] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up rkvdec-supply from device tree
+[    6.967704] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up rkvdec-supply property in node /power-management@fdd90000/power-controller failed
+[    6.969359] SCSI subsystem initialized
+[    6.969455] libata version 3.00 loaded.
+[    6.969797] usbcore: registered new interface driver usbfs
+[    6.969906] usbcore: registered new interface driver hub
+[    6.969994] usbcore: registered new device driver usb
+[    6.970195] mc: Linux media interface: v0.10
+[    6.970269] videodev: Linux video capture interface: v2.00
+[    6.970443] pps_core: LinuxPPS API ver. 1 registered
+[    6.970475] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    6.970539] PTP clock support registered
+[    6.971734] arm-scmi firmware:scmi: SCMI Notifications - Core Enabled.
+[    6.971862] arm-scmi firmware:scmi: SCMI Protocol v2.0 'rockchip:' Firmware version 0x0
+[    6.975585] Advanced Linux Sound Architecture Driver Initialized.
+[    6.976522] Bluetooth: Core ver 2.22
+[    6.976616] NET: Registered protocol family 31
+[    6.976646] Bluetooth: HCI device and connection manager initialized
+[    6.976684] Bluetooth: HCI socket layer initialized
+[    6.976716] Bluetooth: L2CAP socket layer initialized
+[    6.976768] Bluetooth: SCO socket layer initialized
+[    6.976856] NetLabel: Initializing
+[    6.976882] NetLabel:  domain hash size = 128
+[    6.976904] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    6.977028] NetLabel:  unlabeled traffic allowed by default
+[    6.977904] rockchip-cpuinfo cpuinfo: SoC		: 35663000
+[    6.977942] rockchip-cpuinfo cpuinfo: Serial		: f489b85236ac0c7e
+[    6.979884] clocksource: Switched to clocksource arch_sys_counter
+[    8.099674] VFS: Disk quotas dquot_6.6.0
+[    8.099837] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    8.118559] NET: Registered protocol family 2
+[    8.118879] IP idents hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    8.120692] tcp_listen_portaddr_hash hash table entries: 512 (order: 2, 20480 bytes, linear)
+[    8.120890] TCP established hash table entries: 8192 (order: 4, 65536 bytes, linear)
+[    8.121006] TCP bind hash table entries: 8192 (order: 6, 262144 bytes, linear)
+[    8.121272] TCP: Hash tables configured (established 8192 bind 8192)
+[    8.121610] MPTCP token hash table entries: 1024 (order: 3, 49152 bytes, linear)
+[    8.121744] UDP hash table entries: 512 (order: 3, 49152 bytes, linear)
+[    8.121840] UDP-Lite hash table entries: 512 (order: 3, 49152 bytes, linear)
+[    8.122177] NET: Registered protocol family 1
+[    8.123168] RPC: Registered named UNIX socket transport module.
+[    8.123257] RPC: Registered udp transport module.
+[    8.123286] RPC: Registered tcp transport module.
+[    8.123310] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    8.124984] PCI: CLS 0 bytes, default 64
+[    8.126071] Trying to unpack rootfs image as initramfs...
+[    9.296493] Freeing initrd memory: 19548K
+[    9.300161] rockchip-thermal fe710000.tsadc: tsadc is probed successfully!
+[    9.302605] hw perfevents: enabled with armv8_cortex_a55 PMU driver, 7 counters available
+[    9.304286] kvm [1]: IPA Size Limit: 40 bits
+[    9.304360] kvm [1]: GICv3: no GICV resource entry
+[    9.304389] kvm [1]: disabling GICv2 emulation
+[    9.304413] kvm [1]: GIC system register CPU interface enabled
+[    9.304697] kvm [1]: vgic interrupt IRQ9
+[    9.305063] kvm [1]: VHE mode initialized successfully
+[    9.313049] Initialise system trusted keyrings
+[    9.313487] workingset: timestamp_bits=46 max_order=18 bucket_order=0
+[    9.325403] NFS: Registering the id_resolver key type
+[    9.325533] Key type id_resolver registered
+[    9.325563] Key type id_legacy registered
+[    9.325738] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    9.325774] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    9.325804] Installing knfsd (copyright (C) 1996 okir@monad.swb.de).
+[    9.326857] ntfs: driver 2.1.32 [Flags: R/W].
+[    9.383720] NET: Registered protocol family 38
+[    9.383795] xor: measuring software checksum speed
+[    9.390189]    8regs           :  1554 MB/sec
+[    9.395221]    32regs          :  1984 MB/sec
+[    9.401377]    arm64_neon      :  1623 MB/sec
+[    9.401424] xor: using function: 32regs (1984 MB/sec)
+[    9.401467] Key type asymmetric registered
+[    9.401494] Asymmetric key parser 'x509' registered
+[    9.401589] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 242)
+[    9.401881] io scheduler mq-deadline registered
+[    9.401926] io scheduler kyber registered
+[    9.405538] phy phy-fe860000.phy.0: Looking up phy-supply from device tree
+[    9.405628] phy phy-fe860000.phy.0: Looking up phy-supply property in node /phy@fe860000 failed
+[    9.407832] phy phy-fe8a0000.usb2-phy.1: Looking up phy-supply from device tree
+[    9.407924] vbus: could not add device link phy-fe8a0000.usb2-phy.1: -ENOENT
+[    9.408264] phy phy-fe8a0000.usb2-phy.2: Looking up phy-supply from device tree
+[    9.408318] phy phy-fe8a0000.usb2-phy.2: Looking up phy-supply property in node /usb2-phy@fe8a0000/otg-port failed
+[    9.408491] phy phy-fe8a0000.usb2-phy.2: Looking up vbus-supply from device tree
+[    9.408541] phy phy-fe8a0000.usb2-phy.2: Looking up vbus-supply property in node /usb2-phy@fe8a0000/otg-port failed
+[    9.411196] phy phy-fe8b0000.usb2-phy.3: Looking up phy-supply from device tree
+[    9.411271] phy phy-fe8b0000.usb2-phy.3: Looking up phy-supply property in node /usb2-phy@fe8b0000/host-port failed
+[    9.411496] phy phy-fe8b0000.usb2-phy.4: Looking up phy-supply from device tree
+[    9.411547] phy phy-fe8b0000.usb2-phy.4: Looking up phy-supply property in node /usb2-phy@fe8b0000/otg-port failed
+[    9.411727] phy phy-fe8b0000.usb2-phy.4: Looking up vbus-supply from device tree
+[    9.411779] phy phy-fe8b0000.usb2-phy.4: Looking up vbus-supply property in node /usb2-phy@fe8b0000/otg-port failed
+[    9.415950] phy phy-fe830000.phy.5: Looking up phy-supply from device tree
+[    9.416020] phy phy-fe830000.phy.5: Looking up phy-supply property in node /phy@fe830000 failed
+[    9.416803] phy phy-fe840000.phy.6: Looking up phy-supply from device tree
+[    9.416857] phy phy-fe840000.phy.6: Looking up phy-supply property in node /phy@fe840000 failed
+[    9.423530] rk-pcie 3c0000000.pcie: invalid prsnt-gpios property in node
+[    9.423623] rk-pcie 3c0000000.pcie: Looking up vpcie3v3-supply from device tree
+[    9.424423] pwm-backlight backlight: Looking up power-supply from device tree
+[    9.424480] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[    9.424537] pwm-backlight backlight: supply power not found, using dummy regulator
+[    9.424932] rk-pcie 3c0000000.pcie: IRQ msi not found
+[    9.424972] rk-pcie 3c0000000.pcie: use outband MSI support
+[    9.425001] rk-pcie 3c0000000.pcie: Missing *config* reg space
+[    9.425056] rk-pcie 3c0000000.pcie: host bridge /pcie@fe260000 ranges:
+[    9.425126] rk-pcie 3c0000000.pcie:      err 0x00f4000000..0x00f40fffff -> 0x00f4000000
+[    9.425181] rk-pcie 3c0000000.pcie:       IO 0x00f4100000..0x00f41fffff -> 0x00f4100000
+[    9.425237] rk-pcie 3c0000000.pcie:      MEM 0x00f4200000..0x00f5ffffff -> 0x00f4200000
+[    9.425286] rk-pcie 3c0000000.pcie:      MEM 0x0300000000..0x033fffffff -> 0x0300000000
+[    9.425370] rk-pcie 3c0000000.pcie: Missing *config* reg space
+[    9.425454] rk-pcie 3c0000000.pcie: invalid resource
+[    9.425671] iep: Module initialized.
+[    9.425813] mpp_service mpp-srv: 38b0a66a10c6 author: baiywt 2024-01-19 Merge linux-5.10-gen-rkr6
+[    9.425854] mpp_service mpp-srv: probe start
+[    9.429597] mpp_vdpu2 fdea0400.vdpu: Adding to iommu group 1
+[    9.430017] mpp_vdpu2 fdea0400.vdpu: probe device
+[    9.430966] mpp_vdpu2 fdea0400.vdpu: probing finish
+[    9.431876] mpp_vepu2 fdee0000.vepu: Adding to iommu group 3
+[    9.432222] mpp_vepu2 fdee0000.vepu: probing start
+[    9.433095] mpp_vepu2 fdee0000.vepu: probing finish
+[    9.434115] mpp-iep2 fdef0000.iep: Adding to iommu group 4
+[    9.434474] mpp-iep2 fdef0000.iep: probe device
+[    9.434987] mpp-iep2 fdef0000.iep: allocate roi buffer failed
+[    9.435448] mpp-iep2 fdef0000.iep: probing finish
+[    9.436264] mpp_jpgdec fded0000.jpegd: Adding to iommu group 2
+[    9.436673] mpp_jpgdec fded0000.jpegd: probe device
+[    9.437607] mpp_jpgdec fded0000.jpegd: probing finish
+[    9.440095] mpp_service mpp-srv: probe success
+[    9.449410] dma-pl330 fe530000.dmac: Loaded driver for PL330 DMAC-241330
+[    9.449496] dma-pl330 fe530000.dmac: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    9.453614] dma-pl330 fe550000.dmac: Loaded driver for PL330 DMAC-241330
+[    9.453688] dma-pl330 fe550000.dmac: 	DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    9.454572] rockchip-pvtm fde00000.pvtm: pvtm@0 probed
+[    9.454877] rockchip-pvtm fde80000.pvtm: pvtm@1 probed
+[    9.455139] rockchip-pvtm fde90000.pvtm: pvtm@2 probed
+[    9.456496] rockchip-system-monitor rockchip-system-monitor: system monitor probe
+[    9.457807] arm-scmi firmware:scmi: Failed. SCMI protocol 22 not active.
+[    9.458290] Serial: 8250/16550 driver, 10 ports, IRQ sharing disabled
+[    9.459747] fe650000.serial: ttyS1 at MMIO 0xfe650000 (irq = 66, base_baud = 1500000) is a 16550A
+[    9.463738] random: crng init done
+[    9.465376] rockchip-vop2 fe040000.vop: Adding to iommu group 7
+[    9.478895] no ATF memory for init
+[    9.487361] cacheinfo: Unable to detect cache hierarchy for CPU 0
+[    9.488688] brd: module loaded
+[    9.499747] loop: module loaded
+[    9.500710] zram: Added device: zram0
+[    9.501215] lkdtm: No crash points registered, enable through debugfs
+[    9.502616] no ATF memory for init
+[    9.509219] spi-nor spi4.0: unrecognized JEDEC id bytes: ff ff ff ff ff ff
+[    9.509323] spi-nor: probe of spi4.0 failed with error -2
+[    9.513180] rk_gmac-dwmac fe010000.ethernet: IRQ eth_lpi not found
+[    9.513752] rk_gmac-dwmac fe010000.ethernet: Looking up phy-supply from device tree
+[    9.513822] rk_gmac-dwmac fe010000.ethernet: Looking up phy-supply property in node /ethernet@fe010000 failed
+[    9.513886] rk_gmac-dwmac fe010000.ethernet: no regulator found
+[    9.513919] rk_gmac-dwmac fe010000.ethernet: clock input or output? (input).
+[    9.513951] rk_gmac-dwmac fe010000.ethernet: TX delay(0x30).
+[    9.513980] rk_gmac-dwmac fe010000.ethernet: RX delay(0x10).
+[    9.514018] rk_gmac-dwmac fe010000.ethernet: integrated PHY? (no).
+[    9.514133] rk_gmac-dwmac fe010000.ethernet: clock input from PHY
+[    9.514423] rk_gmac-dwmac fe010000.ethernet: init for RGMII
+[    9.514889] rk_gmac-dwmac fe010000.ethernet: User ID: 0x30, Synopsys ID: 0x51
+[    9.514932] rk_gmac-dwmac fe010000.ethernet: 	DWMAC4/5
+[    9.514964] rk_gmac-dwmac fe010000.ethernet: DMA HW capability register supported
+[    9.514996] rk_gmac-dwmac fe010000.ethernet: RX Checksum Offload Engine supported
+[    9.515026] rk_gmac-dwmac fe010000.ethernet: TX Checksum insertion supported
+[    9.515053] rk_gmac-dwmac fe010000.ethernet: Wake-Up On Lan supported
+[    9.515181] rk_gmac-dwmac fe010000.ethernet: TSO supported
+[    9.515214] rk_gmac-dwmac fe010000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    9.515252] rk_gmac-dwmac fe010000.ethernet: rk_get_eth_addr: use serial to generate eth mac address: 00:00:a4:06:ad:bc
+[    9.515288] rk_gmac-dwmac fe010000.ethernet: rk_get_eth_addr: mac address: 00:00:a4:06:ad:bc
+[    9.515320] rk_gmac-dwmac fe010000.ethernet: device MAC address 00:00:a4:06:ad:bc
+[    9.515350] rk_gmac-dwmac fe010000.ethernet: TSO feature enabled
+[    9.515378] rk_gmac-dwmac fe010000.ethernet: Using 32 bits DMA width
+[    9.631078] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.656598] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.683263] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.709927] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.736595] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.763260] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.789998] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.793859] usbcore: registered new interface driver rndis_wlan
+[    9.793993] usbcore: registered new interface driver asix
+[    9.794109] usbcore: registered new interface driver cdc_ether
+[    9.794206] usbcore: registered new interface driver rndis_host
+[    9.794315] usbcore: registered new interface driver cdc_ncm
+[    9.808664] ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+[    9.808771] ehci-pci: EHCI PCI platform driver
+[    9.808906] ehci-platform: EHCI generic platform driver
+[    9.809617] phy phy-fe8b0000.usb2-phy.4: illegal mode
+[    9.811716] ehci-platform fd800000.usb: EHCI Host Controller
+[    9.811799] ehci-platform fd800000.usb: new USB bus registered, assigned bus number 1
+[    9.812032] ehci-platform fd800000.usb: irq 19, io mem 0xfd800000
+[    9.816599] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.823267] ehci-platform fd800000.usb: USB 2.0 started, EHCI 1.00
+[    9.823789] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    9.823831] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.823865] usb usb1: Product: EHCI Host Controller
+[    9.823892] usb usb1: Manufacturer: Linux 5.10.160-rockchip-rk356x ehci_hcd
+[    9.823919] usb usb1: SerialNumber: fd800000.usb
+[    9.824905] hub 1-0:1.0: USB hub found
+[    9.825007] hub 1-0:1.0: 1 port detected
+[    9.828353] ehci-platform fd880000.usb: EHCI Host Controller
+[    9.828435] ehci-platform fd880000.usb: new USB bus registered, assigned bus number 2
+[    9.828654] ehci-platform fd880000.usb: irq 21, io mem 0xfd880000
+[    9.839942] ehci-platform fd880000.usb: USB 2.0 started, EHCI 1.00
+[    9.840484] usb usb2: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    9.840528] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.840562] usb usb2: Product: EHCI Host Controller
+[    9.840589] usb usb2: Manufacturer: Linux 5.10.160-rockchip-rk356x ehci_hcd
+[    9.840616] usb usb2: SerialNumber: fd880000.usb
+[    9.841484] hub 2-0:1.0: USB hub found
+[    9.841586] hub 2-0:1.0: 1 port detected
+[    9.842847] ohci_hcd: USB 1.1 'Open' Host Controller (OHCI) Driver
+[    9.842912] ohci-platform: OHCI generic platform driver
+[    9.843263] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.843493] phy phy-fe8b0000.usb2-phy.4: illegal mode
+[    9.843535] ohci-platform fd840000.usb: Generic Platform OHCI controller
+[    9.843590] ohci-platform fd840000.usb: new USB bus registered, assigned bus number 3
+[    9.843807] ohci-platform fd840000.usb: irq 20, io mem 0xfd840000
+[    9.869935] rk-pcie 3c0000000.pcie: PCIe Linking... LTSSM is 0x3
+[    9.904312] usb usb3: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.10
+[    9.904375] usb usb3: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.904411] usb usb3: Product: Generic Platform OHCI controller
+[    9.904440] usb usb3: Manufacturer: Linux 5.10.160-rockchip-rk356x ohci_hcd
+[    9.904467] usb usb3: SerialNumber: fd840000.usb
+[    9.905341] hub 3-0:1.0: USB hub found
+[    9.905441] hub 3-0:1.0: 1 port detected
+[    9.906507] ohci-platform fd8c0000.usb: Generic Platform OHCI controller
+[    9.906603] ohci-platform fd8c0000.usb: new USB bus registered, assigned bus number 4
+[    9.906821] ohci-platform fd8c0000.usb: irq 22, io mem 0xfd8c0000
+[    9.967646] usb usb4: New USB device found, idVendor=1d6b, idProduct=0001, bcdDevice= 5.10
+[    9.967710] usb usb4: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.967746] usb usb4: Product: Generic Platform OHCI controller
+[    9.967774] usb usb4: Manufacturer: Linux 5.10.160-rockchip-rk356x ohci_hcd
+[    9.967802] usb usb4: SerialNumber: fd8c0000.usb
+[    9.968649] hub 4-0:1.0: USB hub found
+[    9.968750] hub 4-0:1.0: 1 port detected
+[    9.970918] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    9.970990] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 5
+[    9.971223] xhci-hcd xhci-hcd.0.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0000200002010010
+[    9.971355] xhci-hcd xhci-hcd.0.auto: irq 81, io mem 0xfd000000
+[    9.972024] usb usb5: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[    9.972068] usb usb5: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.972101] usb usb5: Product: xHCI Host Controller
+[    9.972127] usb usb5: Manufacturer: Linux 5.10.160-rockchip-rk356x xhci-hcd
+[    9.972156] usb usb5: SerialNumber: xhci-hcd.0.auto
+[    9.973020] hub 5-0:1.0: USB hub found
+[    9.973123] hub 5-0:1.0: 1 port detected
+[    9.973846] xhci-hcd xhci-hcd.0.auto: xHCI Host Controller
+[    9.973896] xhci-hcd xhci-hcd.0.auto: new USB bus registered, assigned bus number 6
+[    9.973958] xhci-hcd xhci-hcd.0.auto: Host supports USB 3.0 SuperSpeed
+[    9.974156] usb usb6: We don't know the algorithms for LPM for this host, disabling LPM.
+[    9.974492] usb usb6: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.10
+[    9.974535] usb usb6: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    9.974569] usb usb6: Product: xHCI Host Controller
+[    9.974595] usb usb6: Manufacturer: Linux 5.10.160-rockchip-rk356x xhci-hcd
+[    9.974623] usb usb6: SerialNumber: xhci-hcd.0.auto
+[    9.975427] hub 6-0:1.0: USB hub found
+[    9.975526] hub 6-0:1.0: 1 port detected
+[    9.976425] usbcore: registered new interface driver cdc_acm
+[    9.976459] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    9.977093] usbcore: registered new interface driver uas
+[    9.977323] usbcore: registered new interface driver usb-storage
+[    9.978826] usbcore: registered new interface driver xpad
+[    9.979146] usbcore: registered new interface driver usbtouchscreen
+[    9.980135] i2c /dev entries driver
+[    9.983245] fan53555-regulator 0-0040: FAN53555 Option[8] Rev[1] Detected!
+[    9.983816] vdd_cpu: override max_uV, 1390000 -> 1387500
+[    9.986408] fan53555-regulator 0-0040: Looking up vin-supply from device tree
+[    9.986828] vdd_cpu: supplied by vcc5v0_sys
+[    9.986871] vcc5v0_sys: could not add device link regulator.12: -ENOENT
+[    9.990411] vdd_cpu: 712 <--> 1387 mV at 1000 mV, enabled
+[    9.996439] rk808 0-0020: chip id: 0x8090
+[    9.996638] rk808 0-0020: No cache defaults, reading back from HW
+[   10.020538] rk808 0-0020: source: on=0x40, off=0x00
+[   10.020602] rk808 0-0020: support dcdc3 fb mode:-22, 1
+[   10.020639] rk808 0-0020: support pmic reset mode:0,0
+[   10.027440] rk808-regulator rk808-regulator: there is no dvs0 gpio
+[   10.027553] rk808-regulator rk808-regulator: there is no dvs1 gpio
+[   10.027697] rk808 0-0020: Looking up vcc1-supply from device tree
+[   10.027749] vdd_logic: supplied by vcc3v3_sys
+[   10.027786] vcc3v3_sys: could not add device link regulator.13: -ENOENT
+[   10.028319] vdd_logic: 500 <--> 1350 mV at 900 mV, enabled
+[   10.028852] rk808 0-0020: Looking up vcc2-supply from device tree
+[   10.028899] vdd_gpu: supplied by vcc3v3_sys
+[   10.028933] vcc3v3_sys: could not add device link regulator.14: -ENOENT
+[   10.029415] vdd_gpu: 500 <--> 1350 mV at 900 mV, enabled
+[   10.029972] rk808 0-0020: Looking up vcc3-supply from device tree
+[   10.030019] vcc_ddr: supplied by vcc3v3_sys
+[   10.030053] vcc3v3_sys: could not add device link regulator.15: -ENOENT
+[   10.030535] vcc_ddr: at 500 mV, enabled
+[   10.031026] rk808 0-0020: Looking up vcc4-supply from device tree
+[   10.031073] vdd_npu: supplied by vcc3v3_sys
+[   10.031115] vcc3v3_sys: could not add device link regulator.16: -ENOENT
+[   10.031604] vdd_npu: 500 <--> 1350 mV at 900 mV, enabled
+[   10.032108] rk808 0-0020: Looking up vcc9-supply from device tree
+[   10.032154] vcc_1v8: supplied by vcc3v3_sys
+[   10.032189] vcc3v3_sys: could not add device link regulator.17: -ENOENT
+[   10.032660] vcc_1v8: 1800 mV, enabled
+[   10.033089] rk808 0-0020: Looking up vcc5-supply from device tree
+[   10.033135] vdda0v9_image: supplied by vcc3v3_sys
+[   10.033170] vcc3v3_sys: could not add device link regulator.18: -ENOENT
+[   10.034246] vdda0v9_image: 900 mV, enabled
+[   10.034702] rk808 0-0020: Looking up vcc5-supply from device tree
+[   10.034748] vdda_0v9: supplied by vcc3v3_sys
+[   10.034782] vcc3v3_sys: could not add device link regulator.19: -ENOENT
+[   10.035794] vdda_0v9: 900 mV, enabled
+[   10.036260] rk808 0-0020: Looking up vcc5-supply from device tree
+[   10.036306] vdda0v9_pmu: supplied by vcc3v3_sys
+[   10.036341] vcc3v3_sys: could not add device link regulator.20: -ENOENT
+[   10.037357] vdda0v9_pmu: 900 mV, enabled
+[   10.037813] vccio_acodec: Bringing 3300000uV into 3000000-3000000uV
+[   10.038229] vccio_acodec: ramp_delay not set
+[   10.038275] rk808 0-0020: Looking up vcc6-supply from device tree
+[   10.038316] vccio_acodec: supplied by vcc3v3_sys
+[   10.038350] vcc3v3_sys: could not add device link regulator.21: -ENOENT
+[   10.039364] vccio_acodec: 3000 mV, enabled
+[   10.039845] rk808 0-0020: Looking up vcc6-supply from device tree
+[   10.039936] vccio_sd: supplied by vcc3v3_sys
+[   10.039974] vcc3v3_sys: could not add device link regulator.22: -ENOENT
+[   10.040993] vccio_sd: 1800 <--> 3300 mV at 3300 mV, enabled
+[   10.041445] rk808 0-0020: Looking up vcc6-supply from device tree
+[   10.041492] vcc3v3_pmu: supplied by vcc3v3_sys
+[   10.041526] vcc3v3_sys: could not add device link regulator.23: -ENOENT
+[   10.042564] vcc3v3_pmu: 3300 mV, enabled
+[   10.043014] rk808 0-0020: Looking up vcc7-supply from device tree
+[   10.043060] vcca_1v8: supplied by vcc3v3_sys
+[   10.043094] vcc3v3_sys: could not add device link regulator.24: -ENOENT
+[   10.044144] vcca_1v8: 1800 mV, enabled
+[   10.044616] rk808 0-0020: Looking up vcc7-supply from device tree
+[   10.044662] vcca1v8_pmu: supplied by vcc3v3_sys
+[   10.044697] vcc3v3_sys: could not add device link regulator.25: -ENOENT
+[   10.045710] vcca1v8_pmu: 1800 mV, enabled
+[   10.046189] rk808 0-0020: Looking up vcc7-supply from device tree
+[   10.046235] vcca1v8_image: supplied by vcc3v3_sys
+[   10.046269] vcc3v3_sys: could not add device link regulator.26: -ENOENT
+[   10.047280] vcca1v8_image: 1800 mV, enabled
+[   10.047724] rk808 0-0020: Looking up vcc9-supply from device tree
+[   10.047770] vcc_3v3: supplied by vcc3v3_sys
+[   10.047805] vcc3v3_sys: could not add device link regulator.27: -ENOENT
+[   10.048302] vcc_3v3: at 3300 mV, enabled
+[   10.048711] rk808 0-0020: Looking up vcc8-supply from device tree
+[   10.048757] vcc3v3_sd: supplied by vcc3v3_sys
+[   10.048801] vcc3v3_sys: could not add device link regulator.28: -ENOENT
+[   10.049270] vcc3v3_sd: at 3300 mV, enabled
+[   10.049700] rk817-battery: Failed to locate of_node [id: -1]
+[   10.050012] rk817-battery rk817-battery: Failed to find matching dt id
+[   10.050233] rk817-charger: Failed to locate of_node [id: -1]
+[   10.050428] rk817-charger rk817-charger: Failed to find matching dt id
+[   10.054082] input: rk805 pwrkey as /devices/platform/fdd40000.i2c/i2c-0/0-0020/rk805-pwrkey/input/input0
+[   10.064218] rockchip-mipi-csi2-hw fdfb0000.mipi-csi2-hw: enter mipi csi2 hw probe!
+[   10.064581] rockchip-mipi-csi2-hw fdfb0000.mipi-csi2-hw: probe success, v4l2_dev:mipi-csi2-hw!
+[   10.068231] usbcore: registered new interface driver uvcvideo
+[   10.068292] USB Video Class driver (1.1.1)
+[   10.070644] pwm-fan pwm-fan: Looking up fan-supply from device tree
+[   10.070728] pwm-fan pwm-fan: Looking up fan-supply property in node /pwm-fan failed
+[   10.072510] usbcore: registered new interface driver btusb
+[   10.073322] cpu cpu0: bin=0
+[   10.073439] cpu cpu0: leakage=33
+[   10.073527] cpu cpu0: pvtm = 91920, from nvmem
+[   10.073579] cpu cpu0: pvtm-volt-sel=3
+[   10.073684] cpu cpu0: soc version=0, speed=3
+[   10.074123] cpu cpu0: Looking up cpu-supply from device tree
+[   10.076193] cpu cpu0: avs=0
+[   10.076433] cpu cpu0: EM: OPP:600000 is inefficient
+[   10.076468] cpu cpu0: EM: OPP:408000 is inefficient
+[   10.076907] cpu cpu0: EM: created perf domain
+[   10.077045] cpu cpu0: l=0 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[   10.084538] sdhci: Secure Digital Host Controller Interface driver
+[   10.084588] sdhci: Copyright(c) Pierre Ossman
+[   10.084604] Synopsys Designware Multimedia Card Interface Driver
+[   10.085259] sdhci-pltfm: SDHCI platform and OF driver helper
+[   10.086243] dwmmc_rockchip fe2b0000.dwmmc: No normal pinctrl state
+[   10.086279] dwmmc_rockchip fe2b0000.dwmmc: No idle pinctrl state
+[   10.086410] dwmmc_rockchip fe2c0000.dwmmc: No normal pinctrl state
+[   10.086431] dwmmc_rockchip fe2b0000.dwmmc: IDMAC supports 32-bit address mode.
+[   10.086450] dwmmc_rockchip fe2c0000.dwmmc: No idle pinctrl state
+[   10.086465] dwmmc_rockchip fe2b0000.dwmmc: Using internal DMA controller.
+[   10.086474] dwmmc_rockchip fe2b0000.dwmmc: Version ID is 270a
+[   10.086587] dwmmc_rockchip fe2c0000.dwmmc: IDMAC supports 32-bit address mode.
+[   10.086597] dwmmc_rockchip fe2b0000.dwmmc: DW MMC controller at irq 52,32 bit host data width,256 deep fifo
+[   10.086624] dwmmc_rockchip fe2c0000.dwmmc: Using internal DMA controller.
+[   10.086633] dwmmc_rockchip fe2c0000.dwmmc: Version ID is 270a
+[   10.086688] dwmmc_rockchip fe2c0000.dwmmc: DW MMC controller at irq 53,32 bit host data width,256 deep fifo
+[   10.086746] dwmmc_rockchip fe2b0000.dwmmc: Looking up vmmc-supply from device tree
+[   10.086781] dwmmc_rockchip fe2c0000.dwmmc: Looking up vmmc-supply from device tree
+[   10.086823] dwmmc_rockchip fe2c0000.dwmmc: Looking up vmmc-supply property in node /dwmmc@fe2c0000 failed
+[   10.086881] dwmmc_rockchip fe2c0000.dwmmc: Looking up vqmmc-supply from device tree
+[   10.086910] dwmmc_rockchip fe2c0000.dwmmc: Looking up vqmmc-supply property in node /dwmmc@fe2c0000 failed
+[   10.086926] dwmmc_rockchip fe2b0000.dwmmc: Looking up vqmmc-supply from device tree
+[   10.087250] dwmmc_rockchip fe2c0000.dwmmc: allocated mmc-pwrseq
+[   10.087273] mmc_host mmc2: card is non-removable.
+[   10.088679] ledtrig-cpu: registered to indicate activity on CPUs
+[   10.088754] arm-scmi firmware:scmi: Failed. SCMI protocol 17 not active.
+[   10.088784] sdhci-dwcmshc fe310000.sdhci: Looking up vmmc-supply from device tree
+[   10.088818] sdhci-dwcmshc fe310000.sdhci: Looking up vmmc-supply property in node /sdhci@fe310000 failed
+[   10.088848] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[   10.088877] sdhci-dwcmshc fe310000.sdhci: Looking up vqmmc-supply from device tree
+[   10.088904] sdhci-dwcmshc fe310000.sdhci: Looking up vqmmc-supply property in node /sdhci@fe310000 failed
+[   10.090054] cryptodev: driver 1.12 loaded.
+[   10.090144] hid: raw HID events driver (C) Jiri Kosina
+[   10.090529] usbcore: registered new interface driver usbhid
+[   10.090549] usbhid: USB HID core driver
+[   10.090874] ashmem: initialized
+[   10.091233] rockchip,bus bus-npu: Looking up bus-supply from device tree
+[   10.091468] rockchip,bus bus-npu: bin=0
+[   10.091492] rockchip,bus bus-npu: Failed to get leakage
+[   10.091565] rockchip,bus bus-npu: pvtm = 91920, from nvmem
+[   10.091592] rockchip,bus bus-npu: pvtm-volt-sel=2
+[   10.091919] rockchip,bus bus-npu: avs=0
+[   10.095991] rockchip-saradc fe720000.saradc: Looking up vref-supply from device tree
+[   10.099939] usbcore: registered new interface driver snd-usb-audio
+[   10.100248] mmc_host mmc1: Bus speed (slot 0) = 375000Hz (slot req 400000Hz, actual 375000HZ div = 0)
+[   10.101631] rk817-codec rk817-codec: DMA mask not set
+[   10.107078] rk-multicodecs rk809-sound: Failed to get ADC channel
+[   10.107253] rk-multicodecs rk809-sound: ASoC: Property 'rockchip,audio-routing' does not exist or its length is not even
+[   10.107272] rk-multicodecs rk809-sound: Audio routing invalid/unspecified
+[   10.108497] rk817-codec rk817-codec: rk817_probe: chip_name:0x80, chip_ver:0x9a
+[   10.114968] input: rockchip-rk809 Headset as /devices/platform/rk809-sound/sound/card0/input1
+[   10.116012] Initializing XFRM netlink socket
+[   10.116065] NET: Registered protocol family 17
+[   10.116323] [BT_RFKILL]: Enter rfkill_rk_init
+[   10.116338] [WLAN_RFKILL]: Enter rfkill_wlan_init
+[   10.116766] [WLAN_RFKILL]: Enter rfkill_wlan_probe
+[   10.116815] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi_chip_type = ap6256
+[   10.116829] [WLAN_RFKILL]: wlan_platdata_parse_dt: enable wifi power control.
+[   10.116842] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi power controled by gpio.
+[   10.116891] [WLAN_RFKILL]: wlan_platdata_parse_dt: WIFI,host_wake_irq = 30, flags = 0.
+[   10.116911] [WLAN_RFKILL]: wlan_platdata_parse_dt: The ref_wifi_clk not found !
+[   10.116924] [WLAN_RFKILL]: rfkill_wlan_probe: init gpio
+[   10.116937] [WLAN_RFKILL]: rfkill_set_wifi_bt_power: 1
+[   10.116949] [WLAN_RFKILL]: Exit rfkill_wlan_probe
+[   10.117917] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: uart_rts_gpios = 77.
+[   10.117966] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,reset_gpio = 79.
+[   10.117989] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_gpio = 81.
+[   10.118011] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_host_irq = 80.
+[   10.118094] [BT_RFKILL]: Request irq for bt wakeup host
+[   10.118192] [BT_RFKILL]: ** disable irq
+[   10.118362] [BT_RFKILL]: bt_default device registered.
+[   10.118528] Key type dns_resolver registered
+[   10.119960] mmc0: SDHCI controller on fe310000.sdhci [fe310000.sdhci] using ADMA
+[   10.120208] registered taskstats version 1
+[   10.120228] Loading compiled-in X.509 certificates
+[   10.121095] Btrfs loaded, crc32c=crc32c-generic
+[   10.121323] pstore: Using crash dump compression: deflate
+[   10.122325] rga: rga2, irq = 30, match scheduler
+[   10.122753] rga: rga2 hardware loaded successfully, hw_version:3.2.63318.
+[   10.122789] rga: rga2 probe successfully
+[   10.123117] rga_iommu: IOMMU binding successfully, default mapping core[0x4]
+[   10.123419] rga: Module initialized. v1.3.0
+
+[   10.123445] ********************************************************************
+[   10.123458] **     NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE           **
+[   10.123469] **                                                                **
+[   10.123481] **  WRITEABLE clk DebugFS SUPPORT HAS BEEN ENABLED IN THIS KERNEL **
+[   10.123493] **                                                                **
+[   10.123504] ** This means that this kernel is built to expose clk operations  **
+[   10.123516] ** such as parent or rate setting, enabling, disabling, etc.      **
+[   10.123527] ** to userspace, which may compromise security on your system.    **
+[   10.123538] **                                                                **
+[   10.123550] ** If you see this message and you are not debugging the          **
+[   10.123562] ** kernel, report this immediately to your vendor!                **
+[   10.123573] **                                                                **
+[   10.123585] **     NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE NOTICE           **
+[   10.123596] ********************************************************************
+[   10.144871] vccio_sd: ramp_delay not set
+[   10.157946] mmc0: Host Software Queue enabled
+[   10.158012] mmc0: new HS200 MMC card at address 0001
+[   10.158765] mmcblk0: mmc0:0001 8GTF4R 7.28 GiB 
+[   10.159068] mmcblk0boot0: mmc0:0001 8GTF4R partition 1 4.00 MiB
+[   10.159399] mmcblk0boot1: mmc0:0001 8GTF4R partition 2 4.00 MiB
+[   10.159489] mmc_host mmc1: Bus speed (slot 0) = 148500000Hz (slot req 150000000Hz, actual 148500000HZ div = 0)
+[   10.159704] mmcblk0rpmb: mmc0:0001 8GTF4R partition 3 512 KiB, chardev (237:0)
+[   10.160302] dwmmc_rockchip fe2b0000.dwmmc: All phases bad!
+[   10.160335] mmc1: tuning execution failed: -5
+[   10.162837]  mmcblk0: p1 p2 p3 p4 p5 p6 p7 p8 p9 p10 p11 p12 p13 p14
+[   10.163365] vccio_sd: ramp_delay not set
+[   10.176040] mmc_host mmc1: Bus speed (slot 0) = 375000Hz (slot req 400000Hz, actual 375000HZ div = 0)
+[   10.217025] mmc_host mmc1: Bus speed (slot 0) = 50000000Hz (slot req 50000000Hz, actual 50000000HZ div = 0)
+[   10.217338] mmc1: new high speed SDHC card at address 0001
+[   10.218620] mmcblk1: mmc1:0001 SD 14.8 GiB 
+[   10.225709] vendor storage:20190527 ret = 0
+[   10.228437]  mmcblk1: p1 p2
+[   10.303853] mmc_host mmc2: Bus speed (slot 0) = 375000Hz (slot req 400000Hz, actual 375000HZ div = 0)
+[   10.317319] rockchip-iodomain fdc20000.syscon:io-domains: Looking up pmuio1-supply from device tree
+[   10.317740] rockchip-iodomain fdc20000.syscon:io-domains: pmuio1(3300000 uV) supplied by vcc3v3_pmu
+[   10.317789] rockchip-iodomain fdc20000.syscon:io-domains: Looking up pmuio2-supply from device tree
+[   10.317952] rockchip-iodomain fdc20000.syscon:io-domains: pmuio2(3300000 uV) supplied by vcc3v3_pmu
+[   10.317998] rockchip-iodomain fdc20000.syscon:io-domains: Looking up vccio1-supply from device tree
+[   10.318379] rockchip-iodomain fdc20000.syscon:io-domains: vccio1(3300000 uV) supplied by vcc_3v3
+[   10.318424] rockchip-iodomain fdc20000.syscon:io-domains: Looking up vccio2-supply from device tree
+[   10.318715] rockchip-iodomain fdc20000.syscon:io-domains: vccio2(1800000 uV) supplied by vcc_1v8
+[   10.318760] rockchip-iodomain fdc20000.syscon:io-domains: Looking up vccio3-supply from device tree
+[   10.319058] rockchip-iodomain fdc20000.syscon:io-domains: vccio3(3300000 uV) supplied by vccio_sd
+[   10.319104] rockchip-iodomain fdc20000.syscon:io-domains: Looking up vccio4-supply from device tree
+[   10.319261] rockchip-iodomain fdc20000.syscon:io-domains: vccio4(1800000 uV) supplied by vcc_1v8
+[   10.319305] rockchip-iodomain fdc20000.syscon:io-domains: Looking up vccio5-supply from device tree
+[   10.319942] rockchip-iodomain fdc20000.syscon:io-domains: vccio5(1800000 uV) supplied by vccio_phy
+[   10.319988] rockchip-iodomain fdc20000.syscon:io-domains: Looking up vccio6-supply from device tree
+[   10.320187] rockchip-iodomain fdc20000.syscon:io-domains: vccio6(3300000 uV) supplied by vcc_3v3
+[   10.320231] rockchip-iodomain fdc20000.syscon:io-domains: Looking up vccio7-supply from device tree
+[   10.320392] rockchip-iodomain fdc20000.syscon:io-domains: vccio7(3300000 uV) supplied by vcc_3v3
+[   10.321893] mpp_rkvenc fdf40000.rkvenc: Adding to iommu group 5
+[   10.322277] mpp_rkvenc fdf40000.rkvenc: probing start
+[   10.322791] mpp_rkvenc fdf40000.rkvenc: Looking up venc-supply from device tree
+[   10.323138] mpp_rkvenc fdf40000.rkvenc: bin=0
+[   10.323183] mpp_rkvenc fdf40000.rkvenc: Failed to get leakage
+[   10.323331] mpp_rkvenc fdf40000.rkvenc: pvtm = 91920, from nvmem
+[   10.323380] mpp_rkvenc fdf40000.rkvenc: pvtm-volt-sel=2
+[   10.323806] mpp_rkvenc fdf40000.rkvenc: avs=0
+[   10.324050] mpp_rkvenc fdf40000.rkvenc: failed to find power_model node
+[   10.324087] mpp_rkvenc fdf40000.rkvenc: failed to initialize power model
+[   10.324116] mpp_rkvenc fdf40000.rkvenc: failed to get dynamic-coefficient
+[   10.325258] mpp_rkvenc fdf40000.rkvenc: probing finish
+[   10.325941] mpp_rkvdec2 fdf80200.rkvdec: Adding to iommu group 6
+[   10.326386] mpp_rkvdec2 fdf80200.rkvdec: rkvdec, probing start
+[   10.327076] mpp_rkvdec2 fdf80200.rkvdec: shared_niu_a is not found!
+[   10.327115] rkvdec2_init:1022: No niu aclk reset resource define
+[   10.327150] mpp_rkvdec2 fdf80200.rkvdec: shared_niu_h is not found!
+[   10.327176] rkvdec2_init:1025: No niu hclk reset resource define
+[   10.327252] mpp_rkvdec2 fdf80200.rkvdec: Looking up vdec-supply from device tree
+[   10.327645] mpp_rkvdec2 fdf80200.rkvdec: bin=0
+[   10.327871] mpp_rkvdec2 fdf80200.rkvdec: leakage=64
+[   10.327914] mpp_rkvdec2 fdf80200.rkvdec: leakage-volt-sel=0
+[   10.327976] mpp_rkvdec2 fdf80200.rkvdec: pvtm = 91920, from nvmem
+[   10.328007] mpp_rkvdec2 fdf80200.rkvdec: pvtm-volt-sel=1
+[   10.328324] mpp_rkvdec2 fdf80200.rkvdec: avs=0
+[   10.328518] mpp_rkvdec2 fdf80200.rkvdec: failed to find power_model node
+[   10.328544] mpp_rkvdec2 fdf80200.rkvdec: failed to initialize power model
+[   10.328564] mpp_rkvdec2 fdf80200.rkvdec: failed to get dynamic-coefficient
+[   10.328763] mpp_rkvdec2 fdf80200.rkvdec: sram_start 0x00000000fdcc0000
+[   10.328787] mpp_rkvdec2 fdf80200.rkvdec: rcb_iova 0x0000000010000000
+[   10.328807] mpp_rkvdec2 fdf80200.rkvdec: sram_size 45056
+[   10.328824] mpp_rkvdec2 fdf80200.rkvdec: rcb_size 65536
+[   10.328843] mpp_rkvdec2 fdf80200.rkvdec: min_width 512
+[   10.328929] mpp_rkvdec2 fdf80200.rkvdec: link mode probe finish
+[   10.329041] mpp_rkvdec2 fdf80200.rkvdec: probing finish
+[   10.330017] pwm-backlight backlight: Looking up power-supply from device tree
+[   10.330060] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   10.330123] pwm-backlight backlight: supply power not found, using dummy regulator
+[   10.330259] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up gpu-supply from device tree
+[   10.330314] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up gpu-supply property in node /power-management@fdd90000/power-controller failed
+[   10.330526] mali fde60000.gpu: Kernel DDK version g18p0-01eac0
+[   10.330720] mali fde60000.gpu: Looking up mali-supply from device tree
+[   10.330945] mali fde60000.gpu: Looking up mem-supply from device tree
+[   10.330987] mali fde60000.gpu: Looking up mem-supply property in node /gpu@fde60000 failed
+[   10.331198] mali fde60000.gpu: Looking up mali-supply from device tree
+[   10.331249] vdd_gpu: could not add device link fde60000.gpu: -EEXIST
+[   10.331271] vdd_gpu: Failed to create debugfs directory
+[   10.331519] mali fde60000.gpu: bin=0
+[   10.331587] mali fde60000.gpu: leakage=10
+[   10.331647] mali fde60000.gpu: pvtm = 91920, from nvmem
+[   10.331683] mali fde60000.gpu: pvtm-volt-sel=3
+[   10.331712] mali fde60000.gpu: soc version=0, speed=3
+[   10.332344] pwm-backlight backlight: Looking up power-supply from device tree
+[   10.332390] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   10.332449] pwm-backlight backlight: supply power not found, using dummy regulator
+[   10.332558] mali fde60000.gpu: avs=0
+[   10.332607] W : [File] : drivers/gpu/arm/bifrost/platform/rk/mali_kbase_config_rk.c; [Line] : 143; [Func] : kbase_platform_rk_init(); power-off-delay-ms not available.
+[   10.333246] mali fde60000.gpu: GPU identified as 0x2 arch 7.4.0 r1p0 status 0
+[   10.333387] mali fde60000.gpu: No priority control manager is configured
+[   10.333808] mali fde60000.gpu: No memory group manager is configured
+[   10.335459] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up vi-supply from device tree
+[   10.335542] rockchip-pm-domain fdd90000.power-management:power-controller: Looking up vi-supply property in node /power-management@fdd90000/power-controller failed
+[   10.335576] mali fde60000.gpu: l=0 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[   10.335608] WCN: marlin_init entry!
+[   10.337480] mali fde60000.gpu: Probed as mali0
+[   10.338122] pwm-backlight backlight: Looking up power-supply from device tree
+[   10.338181] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   10.338242] pwm-backlight backlight: supply power not found, using dummy regulator
+[   10.338406] RKNPU fde40000.npu: Adding to iommu group 0
+[   10.339128] RKNPU fde40000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+[   10.339248] RKNPU fde40000.npu: Looking up rknpu-supply from device tree
+[   10.339590] RKNPU fde40000.npu: Looking up mem-supply from device tree
+[   10.339633] RKNPU fde40000.npu: Looking up mem-supply property in node /npu@fde40000 failed
+[   10.339710] RKNPU fde40000.npu: can't request region for resource [mem 0xfde40000-0xfde4ffff]
+[   10.340884] [drm] Initialized rknpu 0.9.2 20231018 for fde40000.npu on minor 0
+[   10.341362] RKNPU fde40000.npu: Looking up rknpu-supply from device tree
+[   10.341414] vdd_npu: could not add device link fde40000.npu: -EEXIST
+[   10.341428] vdd_npu: Failed to create debugfs directory
+[   10.341668] RKNPU fde40000.npu: bin=0
+[   10.341721] RKNPU fde40000.npu: leakage=5
+[   10.341764] RKNPU fde40000.npu: pvtm = 91920, from nvmem
+[   10.341787] RKNPU fde40000.npu: pvtm-volt-sel=3
+[   10.341806] RKNPU fde40000.npu: soc version=0, speed=3
+[   10.342476] RKNPU fde40000.npu: avs=0
+[   10.342687] RKNPU fde40000.npu: l=0 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[   10.343173] RKNPU fde40000.npu: failed to find power_model node
+[   10.343242] RKNPU fde40000.npu: RKNPU: failed to initialize power model
+[   10.343257] RKNPU fde40000.npu: RKNPU: failed to get dynamic-coefficient
+[   10.344094] pwm-backlight backlight: Looking up power-supply from device tree
+[   10.344130] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   10.344177] pwm-backlight backlight: supply power not found, using dummy regulator
+[   10.344358] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[   10.349967] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[   10.351727] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[   10.353479] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[   10.356246] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[   10.356575] mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+[   10.357149] platform regulatory.0: Direct firmware load for regulatory.db failed with error -2
+[   10.357170] cfg80211: failed to load regulatory.db
+[   10.357393] rockchip-pm rockchip-suspend: not set pwm-regulator-config
+[   10.357863] rockchip-suspend not set sleep-mode-config for mem-lite
+[   10.357876] rockchip-suspend not set wakeup-config for mem-lite
+[   10.357890] rockchip-suspend not set sleep-mode-config for mem-ultra
+[   10.357901] rockchip-suspend not set wakeup-config for mem-ultra
+[   10.358279] pwm-backlight backlight: Looking up power-supply from device tree
+[   10.358304] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   10.358351] pwm-backlight backlight: supply power not found, using dummy regulator
+[   10.358916] I : [File] : drivers/gpu/arm/mali400/mali/linux/mali_kernel_linux.c; [Line] : 406; [Func] : mali_module_init(); svn_rev_string_from_arm of this mali_ko is '', rk_ko_ver is '5', built at '20:49:39', on 'Jun 17 2024'.
+[   10.359452] Mali: 
+[   10.359455] Mali device driver loaded
+[   10.359479] ALSA device list:
+[   10.359490]   #0: rockchip-rk809
+[   10.361664] mmc2: queuing unknown CIS tuple 0x81 (9 bytes)
+[   10.364717] Freeing unused kernel memory: 7040K
+[   10.403384] Run /init as init process
+[   10.403431]   with arguments:
+[   10.403449]     /init
+[   10.403463]     splash
+[   10.403475]   with environment:
+[   10.403488]     HOME=/
+[   10.403501]     TERM=linux
+[   10.403514]     ubootpart=02d435b6-3323-0140-8da1-512d45f483f5
+[   10.403529]     cgroup_enable=memory
+[   10.403542]     cgroup_memory=1
+[   10.418642] mmc_host mmc2: Bus speed (slot 0) = 148500000Hz (slot req 150000000Hz, actual 148500000HZ div = 0)
+[   10.433575] dwmmc_rockchip fe2c0000.dwmmc: Successfully tuned phase to 155
+[   10.438483] mmc2: new ultra high speed SDR104 SDIO card at address 0001
+[   10.491872] systemd-udevd[193]: Starting version 245.4-4ubuntu3.23
+[   10.497289] systemd-udevd[194]: /usr/lib/udev/rules.d/50-udev-default.rules:24 The line takes no effect, ignoring.
+[   10.497405] systemd-udevd[194]: /usr/lib/udev/rules.d/50-udev-default.rules:25 The line takes no effect, ignoring.
+[   10.497473] systemd-udevd[194]: /usr/lib/udev/rules.d/50-udev-default.rules:29 The line takes no effect, ignoring.
+[   10.497539] systemd-udevd[194]: /usr/lib/udev/rules.d/50-udev-default.rules:32 The line takes no effect, ignoring.
+[   10.497586] systemd-udevd[194]: /usr/lib/udev/rules.d/50-udev-default.rules:33 The line takes no effect, ignoring.
+[   10.497635] systemd-udevd[194]: /usr/lib/udev/rules.d/50-udev-default.rules:34 The line takes no effect, ignoring.
+[   10.497681] systemd-udevd[194]: /usr/lib/udev/rules.d/50-udev-default.rules:35 The line takes no effect, ignoring.
+[   10.497726] systemd-udevd[194]: /usr/lib/udev/rules.d/50-udev-default.rules:36 The line takes no effect, ignoring.
+[   10.497778] systemd-udevd[194]: /usr/lib/udev/rules.d/50-udev-default.rules:37 The line takes no effect, ignoring.
+[   10.922639] pwm-backlight backlight: Looking up power-supply from device tree
+[   10.922704] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   10.922758] pwm-backlight backlight: supply power not found, using dummy regulator
+[   10.923907] rk808-rtc rk808-rtc: registered as rtc0
+[   10.930597] rk808-rtc rk808-rtc: setting system clock to 2025-04-13T16:35:28 UTC (1744562128)
+[   10.931021] pwm-backlight backlight: Looking up power-supply from device tree
+[   10.931065] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   10.931118] pwm-backlight backlight: supply power not found, using dummy regulator
+[   12.316637] rk-pcie 3c0000000.pcie: PCIe Link Fail
+[   12.316686] rk-pcie 3c0000000.pcie: failed to initialize host
+[   12.949568] EXT4-fs (mmcblk1p2): mounted filesystem with writeback data mode. Opts: (null)
+[   12.981063] printk: systemd-udevd: 30 output lines suppressed due to ratelimiting
+[   14.128713] NET: Registered protocol family 10
+[   14.131274] Segment Routing with IPv6
+[   14.200288] systemd[1]: systemd 245.4-4ubuntu3.23 running in system mode. (+PAM +AUDIT +SELINUX +IMA +APPARMOR +SMACK +SYSVINIT +UTMP +LIBCRYPTSETUP +GCRYPT +GNUTLS +ACL +XZ +LZ4 +SECCOMP +BLKID +ELFUTILS +KMOD +IDN2 -IDN +PCRE2 default-hierarchy=hybrid)
+[   14.200696] systemd[1]: No virtualization found in DMI
+[   14.200768] systemd[1]: No virtualization found in CPUID
+[   14.200893] systemd[1]: Virtualization XEN not found, /proc/xen does not exist
+[   14.202013] systemd[1]: No virtualization found in /proc/device-tree/*
+[   14.202631] systemd[1]: UML virtualization not found in /proc/cpuinfo.
+[   14.202734] systemd[1]: This platform does not support /proc/sysinfo
+[   14.202805] systemd[1]: Found VM virtualization none
+[   14.202881] systemd[1]: Detected architecture arm64.
+[   14.203937] systemd[1]: Mounting cgroup to /sys/fs/cgroup/cpuset of type cgroup with options cpuset.
+[   14.204938] systemd[1]: Mounting cgroup to /sys/fs/cgroup/cpu,cpuacct of type cgroup with options cpu,cpuacct.
+[   14.205902] systemd[1]: Mounting cgroup to /sys/fs/cgroup/perf_event of type cgroup with options perf_event.
+[   14.206814] systemd[1]: Mounting cgroup to /sys/fs/cgroup/freezer of type cgroup with options freezer.
+[   14.207915] systemd[1]: Mounting cgroup to /sys/fs/cgroup/net_cls,net_prio of type cgroup with options net_cls,net_prio.
+[   14.209182] systemd[1]: Mounting cgroup to /sys/fs/cgroup/devices of type cgroup with options devices.
+[   14.210314] systemd[1]: Mounting cgroup to /sys/fs/cgroup/rdma of type cgroup with options rdma.
+[   14.211361] systemd[1]: Mounting cgroup to /sys/fs/cgroup/blkio of type cgroup with options blkio.
+[   14.212538] systemd[1]: Mounting cgroup to /sys/fs/cgroup/hugetlb of type cgroup with options hugetlb.
+[   14.214047] systemd[1]: Mounting cgroup to /sys/fs/cgroup/memory of type cgroup with options memory.
+[   14.215416] systemd[1]: Mounting cgroup to /sys/fs/cgroup/pids of type cgroup with options pids.
+[   14.230358] systemd[1]: Set hostname to <orangepicm4>.
+[   14.235151] systemd[1]: Successfully added address 127.0.0.1 to loopback interface
+[   14.235456] systemd[1]: Successfully added address ::1 to loopback interface
+[   14.235669] systemd[1]: Successfully brought loopback interface up
+[   14.236436] systemd[1]: Setting 'fs/file-max' to '9223372036854775807'.
+[   14.246447] systemd[1]: Found cgroup2 on /sys/fs/cgroup/unified, unified hierarchy for systemd controller
+[   14.247333] systemd[1]: Found cgroup2 on /sys/fs/cgroup/unified, unified hierarchy for systemd controller
+[   14.247472] systemd[1]: Unified cgroup hierarchy is located at /sys/fs/cgroup/unified. Controllers are on legacy hierarchies.
+[   14.294723] systemd[1]: Got EBADF when using BPF_F_ALLOW_MULTI, which indicates it is supported. Yay!
+[   14.294959] systemd[1]: Controller 'cpu' supported: yes
+[   14.294997] systemd[1]: Controller 'cpuacct' supported: yes
+[   14.295030] systemd[1]: Controller 'cpuset' supported: no
+[   14.295061] systemd[1]: Controller 'io' supported: no
+[   14.295092] systemd[1]: Controller 'blkio' supported: yes
+[   14.295123] systemd[1]: Controller 'memory' supported: yes
+[   14.295154] systemd[1]: Controller 'devices' supported: yes
+[   14.295185] systemd[1]: Controller 'pids' supported: yes
+[   14.295216] systemd[1]: Controller 'bpf-firewall' supported: yes
+[   14.295247] systemd[1]: Controller 'bpf-devices' supported: yes
+[   14.295328] systemd[1]: Set up TFD_TIMER_CANCEL_ON_SET timerfd.
+[   14.296454] systemd[1]: Enabling (yes) showing of status (commandline).
+[   14.307185] systemd[1]: Successfully forked off '(sd-executor)' as PID 275.
+[   14.314845] systemd[275]: Successfully forked off '(direxec)' as PID 276.
+[   14.316056] systemd[275]: Successfully forked off '(direxec)' as PID 277.
+[   14.317428] systemd[275]: Successfully forked off '(direxec)' as PID 278.
+[   14.318760] systemd[275]: Successfully forked off '(direxec)' as PID 279.
+[   14.320274] systemd[275]: Successfully forked off '(direxec)' as PID 280.
+[   14.321666] systemd[275]: Successfully forked off '(direxec)' as PID 281.
+[   14.323161] systemd[275]: Successfully forked off '(direxec)' as PID 282.
+[   14.324860] systemd[275]: Successfully forked off '(direxec)' as PID 283.
+[   14.326254] systemd[275]: Successfully forked off '(direxec)' as PID 284.
+[   14.327691] systemd[275]: Successfully forked off '(direxec)' as PID 285.
+[   14.329119] systemd[275]: Successfully forked off '(direxec)' as PID 286.
+[   14.330613] systemd[275]: Successfully forked off '(direxec)' as PID 287.
+[   14.332142] systemd[275]: Successfully forked off '(direxec)' as PID 288.
+[   14.333869] systemd[275]: Successfully forked off '(direxec)' as PID 289.
+[   14.337509] systemd-bless-boot-generator[278]: Skipping generator, not an EFI boot.
+[   14.354575] systemd-fstab-generator[281]: Parsing /etc/fstab...
+[   14.354874] systemd-fstab-generator[281]: Found entry what=/dev/disk/by-uuid/d450b329-3e0c-492a-a970-9ac97d0527c8 where=/ type=ext4 makefs=no growfs=no noauto=no nofail=no
+[   14.365947] systemd-hibernate-resume-generator[284]: Not running in an initrd, quitting.
+[   14.372261] systemd-getty-generator[282]: Automatically adding serial getty for /dev/ttyFIQ0.
+[   14.373925] systemd-rc-local-generator[285]: Automatically adding rc-local.service.
+[   14.375287] systemd-gpt-auto-generator[283]: Disabling root partition auto-detection, root= is defined.
+[   14.375502] systemd-gpt-auto-generator[283]: Failed to chase block device '/', ignoring: No such file or directory
+[   14.376668] systemd-gpt-auto-generator[283]: mmcblk1p2: Root device /dev/mmcblk1.
+[   14.399337] systemd[275]: /usr/lib/systemd/system-generators/systemd-veritysetup-generator succeeded.
+[   14.402790] systemd-fstab-generator[281]: Found entry what=/dev/disk/by-uuid/EB3C-CA15 where=/boot type=vfat makefs=no growfs=no noauto=no nofail=no
+[   14.406651] systemd-fstab-generator[281]: Found entry what=tmpfs where=/tmp type=tmpfs makefs=no growfs=no noauto=no nofail=no
+[   14.438766] systemd-sysv-generator[288]: Native unit for ssh.service already exists, skipping.
+[   14.449184] systemd-sysv-generator[288]: Native unit for cups.service already exists, skipping.
+[   14.455914] systemd-sysv-generator[288]: Cannot find unit loadcpufreq.service.
+[   14.475284] systemd-sysv-generator[288]: Native unit for procps.service already exists, skipping.
+[   14.481146] systemd-sysv-generator[288]: Native unit for unattended-upgrades.service already exists, skipping.
+[   14.485256] systemd-sysv-generator[288]: Native unit for resolvconf.service already exists, skipping.
+[   14.491130] systemd-sysv-generator[288]: Native unit for speech-dispatcher.service already exists, skipping.
+[   14.496492] systemd-sysv-generator[288]: Native unit for network-manager.service already exists, skipping.
+[   14.497302] systemd-sysv-generator[288]: Native unit for alsa-utils.service already exists, skipping.
+[   14.497861] systemd-sysv-generator[288]: Native unit for hwclock.service already exists, skipping.
+[   14.500063] systemd-sysv-generator[288]: Native unit for pppd-dns.service already exists, skipping.
+[   14.504210] systemd-sysv-generator[288]: Native unit for plymouth.service already exists, skipping.
+[   14.504774] systemd-sysv-generator[288]: Cannot find unit hostapd.service.
+[   14.506969] systemd-sysv-generator[288]: Native unit for smartmontools.service already exists, skipping.
+[   14.511108] systemd-sysv-generator[288]: Native unit for ipsec.service already exists, skipping.
+[   14.512558] systemd-sysv-generator[288]: Native unit for rsyslog.service already exists, skipping.
+[   14.513736] systemd-sysv-generator[288]: Native unit for openvpn.service already exists, skipping.
+[   14.514886] systemd-sysv-generator[288]: Native unit for xrdp.service already exists, skipping.
+[   14.515195] systemd-sysv-generator[288]: Cannot find unit xl2tpd.service.
+[   14.516450] systemd-sysv-generator[288]: Native unit for keyboard-setup.service already exists, skipping.
+[   14.517397] systemd-sysv-generator[288]: Native unit for screen-cleanup.service already exists, skipping.
+[   14.518505] systemd-sysv-generator[288]: Native unit for anacron.service already exists, skipping.
+[   14.519812] systemd-sysv-generator[288]: Native unit for haveged.service already exists, skipping.
+[   14.520240] systemd-sysv-generator[288]: Native unit for x11-common.service already exists, skipping.
+[   14.521467] systemd-sysv-generator[288]: Native unit for fake-hwclock.service already exists, skipping.
+[   14.522861] systemd-sysv-generator[288]: Native unit for bluetooth.service already exists, skipping.
+[   14.524449] systemd-sysv-generator[288]: Native unit for dbus.service already exists, skipping.
+[   14.525921] systemd-sysv-generator[288]: Native unit for chrony.service already exists, skipping.
+[   14.527474] systemd-sysv-generator[288]: Native unit for cron.service already exists, skipping.
+[   14.527835] systemd-sysv-generator[288]: Cannot find unit cpufrequtils.service.
+[   14.530675] systemd-sysv-generator[288]: Native unit for plymouth-log.service already exists, skipping.
+[   14.532136] systemd-sysv-generator[288]: Native unit for sysstat.service already exists, skipping.
+[   14.533789] systemd-sysv-generator[288]: Native unit for lm-sensors.service already exists, skipping.
+[   14.534907] systemd-sysv-generator[288]: Native unit for kerneloops.service already exists, skipping.
+[   14.536015] systemd-sysv-generator[288]: Native unit for rsync.service already exists, skipping.
+[   14.537144] systemd-sysv-generator[288]: Native unit for lightdm.service already exists, skipping.
+[   14.538213] systemd-sysv-generator[288]: Native unit for dnsmasq.service already exists, skipping.
+[   14.539284] systemd-sysv-generator[288]: Native unit for rkaiq_3A.service already exists, skipping.
+[   14.539507] systemd-sysv-generator[288]: Cannot find unit sysfsutils.service.
+[   14.541681] systemd-sysv-generator[288]: Native unit for spice-vdagent.service already exists, skipping.
+[   14.541982] systemd-sysv-generator[288]: Native unit for pulseaudio-enable-autospawn.service already exists, skipping.
+[   14.542197] systemd-sysv-generator[288]: Cannot find unit apport.service.
+[   14.569091] systemd-sysv-generator[288]: Native unit for kmod.service already exists, skipping.
+[   14.572055] systemd-sysv-generator[288]: Native unit for networking.service already exists, skipping.
+[   14.577579] systemd-sysv-generator[288]: Native unit for udev.service already exists, skipping.
+[   14.580487] systemd-sysv-generator[288]: Native unit for console-setup.service already exists, skipping.
+[   14.594892] systemd-sysv-generator[288]: Ignoring S01rsync symlink in rc2.d, not generating rsync.service.
+[   14.595064] systemd-sysv-generator[288]: Ignoring S01smartmontools symlink in rc2.d, not generating smartmontools.service.
+[   14.595166] systemd-sysv-generator[288]: Ignoring S01ipsec symlink in rc2.d, not generating ipsec.service.
+[   14.595258] systemd-sysv-generator[288]: Ignoring S01xrdp symlink in rc2.d, not generating xrdp.service.
+[   14.595349] systemd-sysv-generator[288]: Ignoring S01cron symlink in rc2.d, not generating cron.service.
+[   14.595441] systemd-sysv-generator[288]: Ignoring S01haveged symlink in rc2.d, not generating haveged.service.
+[   14.595535] systemd-sysv-generator[288]: Ignoring S01spice-vdagent symlink in rc2.d, not generating spice-vdagent.service.
+[   14.595637] systemd-sysv-generator[288]: Ignoring S01console-setup.sh symlink in rc2.d, not generating console-setup.service.
+[   14.595731] systemd-sysv-generator[288]: Ignoring S01dbus symlink in rc2.d, not generating dbus.service.
+[   14.595845] systemd-sysv-generator[288]: Ignoring S01plymouth symlink in rc2.d, not generating plymouth.service.
+[   14.595940] systemd-sysv-generator[288]: Ignoring S01bluetooth symlink in rc2.d, not generating bluetooth.service.
+[   14.596033] systemd-sysv-generator[288]: Ignoring S01lightdm symlink in rc2.d, not generating lightdm.service.
+[   14.596133] systemd-sysv-generator[288]: Ignoring S01pulseaudio-enable-autospawn symlink in rc2.d, not generating pulseaudio-enable-autospawn.service.
+[   14.596233] systemd-sysv-generator[288]: Ignoring S01dnsmasq symlink in rc2.d, not generating dnsmasq.service.
+[   14.596324] systemd-sysv-generator[288]: Ignoring S01rsyslog symlink in rc2.d, not generating rsyslog.service.
+[   14.596419] systemd-sysv-generator[288]: Ignoring S01unattended-upgrades symlink in rc2.d, not generating unattended-upgrades.service.
+[   14.596515] systemd-sysv-generator[288]: Ignoring S01openvpn symlink in rc2.d, not generating openvpn.service.
+[   14.596744] systemd-sysv-generator[288]: Ignoring S01ssh symlink in rc2.d, not generating ssh.service.
+[   14.596841] systemd-sysv-generator[288]: Ignoring S01kerneloops symlink in rc2.d, not generating kerneloops.service.
+[   14.596969] systemd-sysv-generator[288]: Ignoring S01chrony symlink in rc2.d, not generating chrony.service.
+[   14.597061] systemd-sysv-generator[288]: Ignoring S01anacron symlink in rc2.d, not generating anacron.service.
+[   14.597153] systemd-sysv-generator[288]: Ignoring S01cups symlink in rc2.d, not generating cups.service.
+[   14.597242] systemd-sysv-generator[288]: Ignoring S01sysstat symlink in rc2.d, not generating sysstat.service.
+[   14.609311] systemd-sysv-generator[288]: Ignoring S01rsync symlink in rc3.d, not generating rsync.service.
+[   14.609448] systemd-sysv-generator[288]: Ignoring S01smartmontools symlink in rc3.d, not generating smartmontools.service.
+[   14.609546] systemd-sysv-generator[288]: Ignoring S01ipsec symlink in rc3.d, not generating ipsec.service.
+[   14.609639] systemd-sysv-generator[288]: Ignoring S01xrdp symlink in rc3.d, not generating xrdp.service.
+[   14.609732] systemd-sysv-generator[288]: Ignoring S01cron symlink in rc3.d, not generating cron.service.
+[   14.609824] systemd-sysv-generator[288]: Ignoring S01haveged symlink in rc3.d, not generating haveged.service.
+[   14.610023] systemd-sysv-generator[288]: Ignoring S01spice-vdagent symlink in rc3.d, not generating spice-vdagent.service.
+[   14.610131] systemd-sysv-generator[288]: Ignoring S01console-setup.sh symlink in rc3.d, not generating console-setup.service.
+[   14.610229] systemd-sysv-generator[288]: Ignoring S01dbus symlink in rc3.d, not generating dbus.service.
+[   14.610344] systemd-sysv-generator[288]: Ignoring S01plymouth symlink in rc3.d, not generating plymouth.service.
+[   14.610438] systemd-sysv-generator[288]: Ignoring S01bluetooth symlink in rc3.d, not generating bluetooth.service.
+[   14.610532] systemd-sysv-generator[288]: Ignoring S01lightdm symlink in rc3.d, not generating lightdm.service.
+[   14.610631] systemd-sysv-generator[288]: Ignoring S01pulseaudio-enable-autospawn symlink in rc3.d, not generating pulseaudio-enable-autospawn.service.
+[   14.610730] systemd-sysv-generator[288]: Ignoring S01dnsmasq symlink in rc3.d, not generating dnsmasq.service.
+[   14.610821] systemd-sysv-generator[288]: Ignoring S01rsyslog symlink in rc3.d, not generating rsyslog.service.
+[   14.610916] systemd-sysv-generator[288]: Ignoring S01unattended-upgrades symlink in rc3.d, not generating unattended-upgrades.service.
+[   14.611011] systemd-sysv-generator[288]: Ignoring S01openvpn symlink in rc3.d, not generating openvpn.service.
+[   14.611125] systemd-sysv-generator[288]: Ignoring S01ssh symlink in rc3.d, not generating ssh.service.
+[   14.611217] systemd-sysv-generator[288]: Ignoring S01kerneloops symlink in rc3.d, not generating kerneloops.service.
+[   14.611341] systemd-sysv-generator[288]: Ignoring S01chrony symlink in rc3.d, not generating chrony.service.
+[   14.611433] systemd-sysv-generator[288]: Ignoring S01anacron symlink in rc3.d, not generating anacron.service.
+[   14.611526] systemd-sysv-generator[288]: Ignoring S01cups symlink in rc3.d, not generating cups.service.
+[   14.611616] systemd-sysv-generator[288]: Ignoring S01sysstat symlink in rc3.d, not generating sysstat.service.
+[   14.615294] systemd-sysv-generator[288]: Ignoring S01rsync symlink in rc4.d, not generating rsync.service.
+[   14.615426] systemd-sysv-generator[288]: Ignoring S01smartmontools symlink in rc4.d, not generating smartmontools.service.
+[   14.615525] systemd-sysv-generator[288]: Ignoring S01ipsec symlink in rc4.d, not generating ipsec.service.
+[   14.615619] systemd-sysv-generator[288]: Ignoring S01xrdp symlink in rc4.d, not generating xrdp.service.
+[   14.615712] systemd-sysv-generator[288]: Ignoring S01cron symlink in rc4.d, not generating cron.service.
+[   14.615803] systemd-sysv-generator[288]: Ignoring S01haveged symlink in rc4.d, not generating haveged.service.
+[   14.615897] systemd-sysv-generator[288]: Ignoring S01spice-vdagent symlink in rc4.d, not generating spice-vdagent.service.
+[   14.615995] systemd-sysv-generator[288]: Ignoring S01console-setup.sh symlink in rc4.d, not generating console-setup.service.
+[   14.616089] systemd-sysv-generator[288]: Ignoring S01dbus symlink in rc4.d, not generating dbus.service.
+[   14.616203] systemd-sysv-generator[288]: Ignoring S01plymouth symlink in rc4.d, not generating plymouth.service.
+[   14.616296] systemd-sysv-generator[288]: Ignoring S01bluetooth symlink in rc4.d, not generating bluetooth.service.
+[   14.616388] systemd-sysv-generator[288]: Ignoring S01lightdm symlink in rc4.d, not generating lightdm.service.
+[   14.616486] systemd-sysv-generator[288]: Ignoring S01pulseaudio-enable-autospawn symlink in rc4.d, not generating pulseaudio-enable-autospawn.service.
+[   14.616646] systemd-sysv-generator[288]: Ignoring S01dnsmasq symlink in rc4.d, not generating dnsmasq.service.
+[   14.616745] systemd-sysv-generator[288]: Ignoring S01rsyslog symlink in rc4.d, not generating rsyslog.service.
+[   14.616842] systemd-sysv-generator[288]: Ignoring S01unattended-upgrades symlink in rc4.d, not generating unattended-upgrades.service.
+[   14.616938] systemd-sysv-generator[288]: Ignoring S01openvpn symlink in rc4.d, not generating openvpn.service.
+[   14.617054] systemd-sysv-generator[288]: Ignoring S01ssh symlink in rc4.d, not generating ssh.service.
+[   14.617147] systemd-sysv-generator[288]: Ignoring S01kerneloops symlink in rc4.d, not generating kerneloops.service.
+[   14.617274] systemd-sysv-generator[288]: Ignoring S01chrony symlink in rc4.d, not generating chrony.service.
+[   14.617365] systemd-sysv-generator[288]: Ignoring S01anacron symlink in rc4.d, not generating anacron.service.
+[   14.617458] systemd-sysv-generator[288]: Ignoring S01cups symlink in rc4.d, not generating cups.service.
+[   14.617548] systemd-sysv-generator[288]: Ignoring S01sysstat symlink in rc4.d, not generating sysstat.service.
+[   14.622013] systemd-sysv-generator[288]: Ignoring S01rsync symlink in rc5.d, not generating rsync.service.
+[   14.622119] systemd-sysv-generator[288]: Ignoring S01smartmontools symlink in rc5.d, not generating smartmontools.service.
+[   14.622192] systemd-sysv-generator[288]: Ignoring S01ipsec symlink in rc5.d, not generating ipsec.service.
+[   14.622260] systemd-sysv-generator[288]: Ignoring S01xrdp symlink in rc5.d, not generating xrdp.service.
+[   14.622329] systemd-sysv-generator[288]: Ignoring S01cron symlink in rc5.d, not generating cron.service.
+[   14.622396] systemd-sysv-generator[288]: Ignoring S01haveged symlink in rc5.d, not generating haveged.service.
+[   14.622466] systemd-sysv-generator[288]: Ignoring S01spice-vdagent symlink in rc5.d, not generating spice-vdagent.service.
+[   14.622539] systemd-sysv-generator[288]: Ignoring S01console-setup.sh symlink in rc5.d, not generating console-setup.service.
+[   14.622608] systemd-sysv-generator[288]: Ignoring S01dbus symlink in rc5.d, not generating dbus.service.
+[   14.622695] systemd-sysv-generator[288]: Ignoring S01plymouth symlink in rc5.d, not generating plymouth.service.
+[   14.622765] systemd-sysv-generator[288]: Ignoring S01bluetooth symlink in rc5.d, not generating bluetooth.service.
+[   14.622834] systemd-sysv-generator[288]: Ignoring S01lightdm symlink in rc5.d, not generating lightdm.service.
+[   14.622905] systemd-sysv-generator[288]: Ignoring S01pulseaudio-enable-autospawn symlink in rc5.d, not generating pulseaudio-enable-autospawn.service.
+[   14.622979] systemd-sysv-generator[288]: Ignoring S01dnsmasq symlink in rc5.d, not generating dnsmasq.service.
+[   14.623047] systemd-sysv-generator[288]: Ignoring S01rsyslog symlink in rc5.d, not generating rsyslog.service.
+[   14.623116] systemd-sysv-generator[288]: Ignoring S01unattended-upgrades symlink in rc5.d, not generating unattended-upgrades.service.
+[   14.623188] systemd-sysv-generator[288]: Ignoring S01openvpn symlink in rc5.d, not generating openvpn.service.
+[   14.623353] systemd-sysv-generator[288]: Ignoring S01ssh symlink in rc5.d, not generating ssh.service.
+[   14.623424] systemd-sysv-generator[288]: Ignoring S01kerneloops symlink in rc5.d, not generating kerneloops.service.
+[   14.623519] systemd-sysv-generator[288]: Ignoring S01chrony symlink in rc5.d, not generating chrony.service.
+[   14.623588] systemd-sysv-generator[288]: Ignoring S01anacron symlink in rc5.d, not generating anacron.service.
+[   14.623655] systemd-sysv-generator[288]: Ignoring S01cups symlink in rc5.d, not generating cups.service.
+[   14.623722] systemd-sysv-generator[288]: Ignoring S01sysstat symlink in rc5.d, not generating sysstat.service.
+[   14.623981] systemd-sysv-generator[288]: Loading SysV script /etc/init.d/cpufrequtils
+[   14.639425] systemd-sysv-generator[288]: Loading SysV script /etc/init.d/sysfsutils
+[   14.652807] systemd-sysv-generator[288]: Adding Provides: alias 'sysfsconf.service' for 'sysfsutils.service'
+[   14.655742] systemd-sysv-generator[288]: Loading SysV script /etc/init.d/hostapd
+[   14.687721] systemd-sysv-generator[288]: Loading SysV script /etc/init.d/apport
+[   14.708520] systemd-sysv-generator[288]: Loading SysV script /etc/init.d/xl2tpd
+[   14.709312] systemd-gpt-auto-generator[283]: Waiting for device (parent + 2 partitions) to appear...
+[   14.715168] systemd-sysv-generator[288]: Adding Provides: alias 'l2tpd.service' for 'xl2tpd.service'
+[   14.717030] systemd-sysv-generator[288]: Loading SysV script /etc/init.d/loadcpufreq
+[   14.721621] systemd[275]: /usr/lib/systemd/system-generators/openvpn-generator succeeded.
+[   14.800568] systemd-gpt-auto-generator[283]: /boot specified in fstab, ignoring XBOOTLDR partition.
+[   14.807930] systemd[275]: /usr/lib/systemd/system-generators/systemd-gpt-auto-generator succeeded.
+[   14.808066] systemd[275]: /usr/lib/systemd/system-generators/netplan succeeded.
+[   14.808180] systemd[275]: /usr/lib/systemd/system-generators/systemd-fstab-generator succeeded.
+[   14.808274] systemd[275]: /usr/lib/systemd/system-generators/systemd-run-generator succeeded.
+[   14.808361] systemd[275]: /usr/lib/systemd/system-generators/systemd-cryptsetup-generator succeeded.
+[   14.808445] systemd[275]: /usr/lib/systemd/system-generators/systemd-sysv-generator succeeded.
+[   14.808533] systemd[275]: /usr/lib/systemd/system-generators/systemd-system-update-generator succeeded.
+[   14.808617] systemd[275]: /usr/lib/systemd/system-generators/systemd-getty-generator succeeded.
+[   14.808713] systemd[275]: /usr/lib/systemd/system-generators/systemd-rc-local-generator succeeded.
+[   14.808797] systemd[275]: /usr/lib/systemd/system-generators/systemd-debug-generator succeeded.
+[   14.808883] systemd[275]: /usr/lib/systemd/system-generators/systemd-bless-boot-generator succeeded.
+[   14.808966] systemd[275]: /usr/lib/systemd/system-generators/systemd-hibernate-resume-generator succeeded.
+[   14.810402] systemd[1]: (sd-executor) succeeded.
+[   14.810590] systemd[1]: Looking for unit files in (higher priority first):
+[   14.810627] systemd[1]: 	/etc/systemd/system.control
+[   14.810657] systemd[1]: 	/run/systemd/system.control
+[   14.810686] systemd[1]: 	/run/systemd/transient
+[   14.810713] systemd[1]: 	/run/systemd/generator.early
+[   14.810741] systemd[1]: 	/etc/systemd/system
+[   14.810768] systemd[1]: 	/etc/systemd/system.attached
+[   14.810796] systemd[1]: 	/run/systemd/system
+[   14.810823] systemd[1]: 	/run/systemd/system.attached
+[   14.810850] systemd[1]: 	/run/systemd/generator
+[   14.810877] systemd[1]: 	/usr/local/lib/systemd/system
+[   14.810904] systemd[1]: 	/lib/systemd/system
+[   14.810931] systemd[1]: 	/usr/lib/systemd/system
+[   14.810958] systemd[1]: 	/run/systemd/generator.late
+[   14.814861] systemd[1]: unit_file_build_name_map: normal unit file: /etc/systemd/system/logrotate.service
+[   14.815200] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/smartd.service → smartmontools.service
+[   14.815527] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/dbus-fi.w1.wpa_supplicant1.service → wpa_supplicant.service
+[   14.815738] systemd[1]: unit_file_build_name_map: linked unit file: /etc/systemd/system/ondemand.service → /dev/null
+[   14.816040] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/syslog.service → rsyslog.service
+[   14.816304] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/sshd.service → ssh.service
+[   14.816611] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/display-manager.service → lightdm.service
+[   14.816934] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service → NetworkManager-dispatcher.service
+[   14.817194] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/chronyd.service → chrony.service
+[   14.817514] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/dbus-org.freedesktop.resolve1.service → systemd-resolved.service
+[   14.817818] systemd[1]: unit_file_build_name_map: alias: /etc/systemd/system/dbus-org.bluez.service → bluetooth.service
+[   14.818019] systemd[1]: unit_file_build_name_map: normal unit file: /run/systemd/system/netplan-ovs-cleanup.service
+[   14.818242] systemd[1]: unit_file_build_name_map: normal unit file: /run/systemd/generator/tmp.mount
+[   14.818345] systemd[1]: unit_file_build_name_map: normal unit file: /run/systemd/generator/boot.mount
+[   14.818438] systemd[1]: unit_file_build_name_map: normal unit file: /run/systemd/generator/-.mount
+[   14.819680] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/dnsmasq.service
+[   14.819764] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-journal-flush.service
+[   14.819845] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sys-kernel-config.mount
+[   14.820009] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/rsync.service
+[   14.820090] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/fake-hwclock.service
+[   14.820163] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/user@.service
+[   14.820242] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/chrony-dnssrv@.timer
+[   14.820624] systemd[1]: unit_file_build_name_map: linked unit file: /lib/systemd/system/sudo.service → /dev/null
+[   14.820720] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/system-systemd\x2dcryptsetup.slice
+[   14.820800] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/kerneloops.service
+[   14.820912] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/apt-daily.service
+[   14.820987] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/time-sync.target
+[   14.821067] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/ua-reboot-cmds.service
+[   14.821141] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-journald.service
+[   14.821213] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/networking.service
+[   14.821286] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/hybrid-sleep.target
+[   14.821360] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/chrony-dnssrv@.service
+[   14.821803] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel2.target → multi-user.target
+[   14.821886] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-tmpfiles-setup.service
+[   14.821969] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/console-setup.service
+[   14.822160] systemd[1]: unit_file_build_name_map: linked unit file: /lib/systemd/system/x11-common.service → /dev/null
+[   14.822597] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/ctrl-alt-del.target → reboot.target
+[   14.822681] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/shutdown.target
+[   14.822757] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/anacron.timer
+[   14.822830] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/brltty-udev.service
+[   14.822905] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/rsyslog.service
+[   14.822981] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/resolvconf-pull-resolved.service
+[   14.823063] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/orangepi-firstrun-config.service
+[   14.823138] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/polkit.service
+[   14.823272] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-bless-boot.service
+[   14.823359] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/xrdp-sesman.service
+[   14.823434] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-hostnamed.service
+[   14.823516] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/rkaiq_3A.service
+[   14.823599] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/wpa_supplicant-nl80211@.service
+[   14.823740] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/plymouth-kexec.service
+[   14.823818] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sockets.target
+[   14.823894] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/ifupdown-wait-online.service
+[   14.823968] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/timers.target
+[   14.824044] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/slices.target
+[   14.824120] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/quotaon.service
+[   14.824590] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel0.target → poweroff.target
+[   14.824680] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/spice-vdagentd.socket
+[   14.824758] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/NetworkManager-dispatcher.service
+[   14.824833] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-initctl.socket
+[   14.824909] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sigpwr.target
+[   14.824986] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-ask-password-wall.path
+[   14.825068] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/rescue.service
+[   14.825462] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel4.target → multi-user.target
+[   14.825754] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-hibernate-resume@.service
+[   14.825831] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/cups.path
+[   14.825910] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-user-sessions.service
+[   14.825990] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/halt.target
+[   14.826061] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/openvpn-server@.service
+[   14.826138] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-networkd-wait-online.service
+[   14.826214] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/brltty.service
+[   14.826291] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/swap.target
+[   14.826365] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/remote-fs.target
+[   14.826436] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/sysinit.target
+[   14.826508] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/local-fs.target
+[   14.826631] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-rfkill.socket
+[   14.826708] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/printer.target
+[   14.826779] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/haveged.service
+[   14.826851] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/debug-shell.service
+[   14.826922] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/poweroff.target
+[   14.826994] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/graphical.target
+[   14.827068] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/resolvconf-pull-resolved.path
+[   14.827144] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/getty@.service
+[   14.827217] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-udev-trigger.service
+[   14.827290] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/xrdp.service
+[   14.827366] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-udevd-control.socket
+[   14.827446] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/emergency.service
+[   14.827524] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-udevd-kernel.socket
+[   14.827601] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-hybrid-sleep.service
+[   14.827674] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/unattended-upgrades.service
+[   14.827747] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/e2scrub@.service
+[   14.828113] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/procps.service → systemd-sysctl.service
+[   14.828208] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/ssh@.service
+[   14.828285] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/initrd-parse-etc.service
+[   14.828367] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/udisks2.service
+[   14.828443] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/cryptsetup.target
+[   14.828520] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/plymouth-read-write.service
+[   14.828595] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-exit.service
+[   14.829152] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/runlevel5.target → graphical.target
+[   14.829235] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/usbdevice.service
+[   14.829310] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-binfmt.service
+[   14.829387] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/user-runtime-dir@.service
+[   14.829465] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-suspend.service
+[   14.829537] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/chrony.service
+[   14.829611] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/initrd-switch-root.service
+[   14.829688] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-journald-audit.socket
+[   14.829770] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-ask-password-plymouth.path
+[   14.829851] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-pstore.service
+[   14.829980] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-resolved.service
+[   14.830057] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-fsck-root.service
+[   14.830132] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/keyboard-setup.service
+[   14.830480] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/plymouth.service → plymouth-quit.service
+[   14.830562] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/suspend-then-hibernate.target
+[   14.830641] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/remote-fs-pre.target
+[   14.830716] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/openvpn-client@.service
+[   14.830788] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/cups.service
+[   14.830863] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/wpa_supplicant@.service
+[   14.830936] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/boot-complete.target
+[   14.831010] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/local-fs-pre.target
+[   14.831083] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/plymouth-reboot.service
+[   14.831156] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/smartmontools.service
+[   14.831235] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/packagekit-offline-update.service
+[   14.831312] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/man-db.service
+[   14.831386] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/getty.target
+[   14.831460] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-networkd.service
+[   14.831531] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/logrotate.timer
+[   14.831604] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/wpa_supplicant-wired@.service
+[   14.831675] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/upower.service
+[   14.831748] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/orangepi-firstrun.service
+[   14.831823] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/fstrim.timer
+[   14.831898] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-ask-password-plymouth.service
+[   14.832143] systemd[1]: unit_file_build_name_map: linked unit file: /lib/systemd/system/rc.service → /dev/null
+[   14.832230] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/bluetooth.service
+[   14.832599] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/speech-dispatcher.service → speech-dispatcherd.service
+[   14.832799] systemd[1]: unit_file_build_name_map: linked unit file: /lib/systemd/system/screen-cleanup.service → /dev/null
+[   14.832911] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/systemd-rfkill.service
+[   14.833329] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/network-manager.service → NetworkManager.service
+[   14.833415] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/lightdm.service
+[   14.833492] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/apt-daily-upgrade.service
+[   14.833570] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/apport-forward@.service
+[   14.833647] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/orangepi-hardware-optimize.service
+[   14.833727] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/suspend.target
+[   14.833806] systemd[1]: unit_file_build_name_map: normal unit file: /lib/systemd/system/anacron.service
+[   14.834279] systemd[1]: unit_file_build_name_map: alias: /lib/systemd/system/autovt@.service → getty@.service
+[   15.531514] EXT4-fs (mmcblk1p2): re-mounted. Opts: commit=600,errors=remount-ro
+[   16.948535] panel_waveshare_dsi_v2: loading out-of-tree module taints kernel.
+[   16.949422] wave_my_dr 1-0045: dsi panel: waveshare,my_driver
+[   16.960310] wave_my_dr 1-0045: dsi:waveshare panel hw id = 0x1
+[   16.963493] [dhd] _dhd_module_init: in Dongle Host Driver, version 101.10.591.46.22 (20231003-3)(a5ec15e)
+               drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd compiled on Jun 20 2024 at 09:40:37
+
+[   16.963505] [dhd] ANDROID_VERSION = 14
+[   16.963509] [dhd] STATIC-MSG) dhd_static_buf_init : 101.10.361.31 (wlan=r892223-20230427-1)
+[   16.963655] [dhd] STATIC-MSG) dhd_init_wlan_mem : prealloc ok for index 0: 6624256(6469K)
+[   16.963666] [WLAN_RFKILL]: rockchip_wifi_get_oob_irq: Enter
+[   16.963745] [dhd] dhd_wlan_init_gpio: WL_HOST_WAKE=-1, oob_irq=109, oob_irq_flags=0x4
+[   16.963750] [dhd] dhd_wlan_init_gpio: WL_REG_ON=-1
+[   16.963754] [dhd] dhd_wifi_platform_load: Enter
+[   16.963791] [dhd] Power-up adapter 'DHD generic adapter'
+[   16.963962] [dhd] dummy_probe: enter
+[   16.964120] [dhd] dummy_probe: enter
+[   16.964251] pwm-backlight backlight: Looking up power-supply from device tree
+[   16.964266] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   16.964269] [dhd] dummy_probe: enter
+[   16.964312] pwm-backlight backlight: supply power not found, using dummy regulator
+[   16.964323] [dhd] wifi_platform_set_power = 1, delay: 200 msec
+[   16.964331] [dhd] ======== PULL WL_REG_ON(-1) HIGH! ========
+[   16.964335] [WLAN_RFKILL]: rockchip_wifi_power: 1
+[   16.964339] [WLAN_RFKILL]: rockchip_wifi_power: toggle = false
+[   16.964344] [WLAN_RFKILL]: wifi turn on power [GPIO-1-0]
+[   16.965938] pwm-backlight backlight: Looking up power-supply from device tree
+[   16.965958] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   16.965995] pwm-backlight backlight: supply power not found, using dummy regulator
+[   16.970334] wave_my_dr 1-0045: dsi:waveshare panel size = 101
+[   16.987098] wave_my_dr 1-0045: dsi:waveshare panel mcu version = 0x1
+[   17.014791] wave_my_dr 1-0045: dsi:start0
+[   17.014939] wave_my_dr 1-0045: dsi:start1
+[   17.015139] wave-ts-dsi fe070000.dsi.0: dsi:init
+[   17.015302] dw-mipi-dsi-rockchip fe070000.dsi: [drm:dw_mipi_dsi_host_attach] *ERROR* Failed to find panel or bridge: -517
+[   17.015309] wave-ts-dsi fe070000.dsi.0: dsi: failed to attach dsi to host: -517
+[   17.015476] wave_my_dr 1-0045: dsi:start2
+[   17.015483] wave_my_dr 1-0045: dsi:start3
+[   17.015487] wave_my_dr 1-0045: dsi:start4
+[   17.017001] pwm-backlight backlight: Looking up power-supply from device tree
+[   17.017023] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   17.017068] pwm-backlight backlight: supply power not found, using dummy regulator
+[   17.017838] wave-ts-dsi fe070000.dsi.0: dsi:init
+[   17.018264] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp0 assign plane mask: 0x3f, primary plane phy id: 4
+[   17.018277] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp1 assign plane mask: 0x0, primary plane phy id: -1
+[   17.018283] rockchip-vop2 fe040000.vop: [drm:vop2_bind] vp2 assign plane mask: 0x0, primary plane phy id: -1
+[   17.018421] rockchip-vop2 fe040000.vop: [drm:vop2_bind] Cluster0-win0 as cursor plane for vp0
+[   17.018491] [drm] failed to init overlay plane Cluster0-win1
+[   17.018572] rockchip-drm display-subsystem: bound fe040000.vop (ops 0xffffffc0091d81c0)
+[   17.018725] rockchip-drm display-subsystem: bound fe070000.dsi (ops 0xffffffc0091e7da0)
+[   17.024307] rockchip-drm display-subsystem: failed to parse loader memory
+[   17.024359] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   17.024368] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   17.031317] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   17.031331] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   17.031705] rockchip-vop2 fe040000.vop: [drm:vop2_crtc_atomic_enable] Update mode to 800x1280p60, type: 16(if:40, flag:0x0) for vp0 dclk: 70000000
+[   17.099931] wave_my_dr 1-0045: waveshare dsi prepare start: 
+[   17.169950] [dhd] wifi_platform_set_power = 1, sleep done: 200 msec
+[   17.169960] [dhd] wifi_platform_bus_enumerate device present 1
+[   17.169964] [dhd] ======== Card detection to detect SDIO card! ========
+[   17.186216] [dhd] bcmsdh_register: register client driver
+[   17.186388] [dhd] bcmsdh_sdmmc_probe: Enter num=1
+[   17.186654] [dhd] bcmsdh_sdmmc_probe: Enter num=2
+[   17.186658] [dhd] bus num (host idx)=2, slot num (rca)=1
+[   17.186662] [dhd] found adapter info 'DHD generic adapter'
+[   17.186670] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 3, size 139264
+[   17.186690] [dhd] succeed to alloc static buf
+[   17.186693] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 4, size 0
+[   17.186738] [dhd] sdioh_attach: set sd_f2_blocksize 256
+[   17.186760] [dhd] sdioh_attach: sd clock rate = 150000000
+[   17.187014] [dhd] dhdsdio_probe : no mutex held
+[   17.187016] [dhd] dhdsdio_probe : set mutex lock
+[   17.187090] [dhd] F1 signature read @0x18000000=0x15294345
+[   17.189097] [dhd] F1 signature OK, socitype:0x1 chip:0x4345 rev:0x9 pkg:0x2
+[   17.189576] [dhd] DHD: dongle ram size is set to 819200(orig 819200) at 0x198000
+[   17.189628] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 7, size 43224
+[   17.189656] [dhd] dhd_conf_set_chiprev : devid=0xa9bf, chip=0x4345, chiprev=9
+[   17.189696] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 0, size 10320
+[   17.190368] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 5, size 65536
+[   17.190921] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 19, size 65712
+[   17.190969] [dhd] dhd_log_dump_init: kernel log buf size = 256KB; logdump_prsrv_tailsize = 80KB; limit prsrv tail size to = 38KB
+[   17.190976] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 15, size 4194304
+[   17.191547] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 16, size 8192
+[   17.191788] [dhd] dhd_attach(): thread:dhd_watchdog_thread:184 started
+[   17.193779] [dhd] dhd_attach(): thread:dhd_dpc:185 started
+[   17.196773] [dhd] dhd_attach(): thread:dhd_rxf:186 started
+[   17.196788] [dhd] dhd_deferred_work_init: work queue initialized
+[   17.196802] [dhd] dhd_tcpack_suppress_set: TCP ACK Suppress mode 0 -> mode 2
+[   17.196805] [dhd] dhd_tcpack_suppress_set: TCPACK_INFO_MAXNUM=40, TCPDATA_INFO_MAXNUM=40
+[   17.196884] [dhd] dhd_get_memdump_info: MEMDUMP ENABLED = 3
+[   17.196899] [dhd] sdioh_cis_read: func_cis_ptr[0]=0x10ac
+[   17.212831] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 1, size 10300
+[   17.212839] [dhd] STATIC-MSG) dhd_wlan_mem_prealloc : section 2, size 65536
+[   17.212882] [dhd] dhdsdio_probe_init: making DHD_BUS_DOWN
+[   17.212993] [dhd] Dongle Host Driver, version 101.10.591.46.22 (20231003-3)(a5ec15e)
+               drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd compiled on Jun 20 2024 at 09:40:37
+
+[   17.213807] [dhd] Register interface [wlan0]  MAC: 54:78:c9:f6:0e:46
+
+[   17.213966] [dhd] [wlan0] wl_android_wifi_off :  g_wifi_on=1 force_off=1
+[   17.213989] [dhd] dhd_bus_devreset: == Power OFF ==
+[   17.214184] [dhd] dhd_bus_stop: making DHD_BUS_DOWN
+[   17.214213] [dhd] bcmsdh_oob_intr_unregister: Enter
+[   17.214215] [dhd] bcmsdh_oob_intr_unregister: irq is not registered
+[   17.214226] [dhd] dhd_bus_devreset: making dhdpub up FALSE
+[   17.214232] [dhd] dhd_txglom_enable: enable 0
+[   17.214235] [dhd] dhd_bus_devreset: making DHD_BUS_DOWN
+[   17.214270] [dhd] wifi_platform_set_power = 0, delay: 0 msec
+[   17.214277] [dhd] ======== PULL WL_REG_ON(-1) LOW! ========
+[   17.214280] [WLAN_RFKILL]: rockchip_wifi_power: 0
+[   17.214284] [WLAN_RFKILL]: rockchip_wifi_power: toggle = false
+[   17.214286] [WLAN_RFKILL]: rockchip_wifi_power: toggle = false
+[   17.214288] [WLAN_RFKILL]: wifi shut off power [GPIO-1-1]
+[   17.214291] [dhd] [wlan0] wl_android_wifi_off : out
+[   17.214296] [dhd] wl_android_post_init: 0
+[   17.214301] [dhd] dhdsdio_probe : mutex is released.
+[   17.214489] [dhd] bcmsdh_sdmmc_probe: Enter num=3
+[   17.214585] [dhd] _dhd_module_init: Exit err=0
+[   17.309952] wave_my_dr 1-0045: waveshare dsi prepare: 
+[   17.309983] wave_my_dr 1-0045: waveshare dsi enable: 
+[   17.310000] dw-mipi-dsi-rockchip fe070000.dsi: [drm:dw_mipi_dsi_bridge_enable] final DSI-Link bandwidth: 936 x 2 Mbps
+[   17.343540] Console: switching to colour frame buffer device 100x80
+[   17.367817] rockchip-drm display-subsystem: [drm] fb0: rockchipdrmfb frame buffer device
+[   17.391096] [drm] Initialized rockchip 3.0.0 20140818 for display-subsystem on minor 1
+[   17.391128] wave-ts-dsi fe070000.dsi.0: dsi:Success 0
+[   17.392413] pwm-backlight backlight: Looking up power-supply from device tree
+[   17.392437] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   17.392482] pwm-backlight backlight: supply power not found, using dummy regulator
+[   17.397609] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   17.397626] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   17.461930] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[   17.513529] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[   17.513571] [BT_RFKILL]: ENABLE UART_RTS
+[   17.620005] [BT_RFKILL]: DISABLE UART_RTS
+[   17.620055] [BT_RFKILL]: bt turn on power
+[   17.620088] [BT_RFKILL]: Request irq for bt wakeup host
+[   17.620129] [BT_RFKILL]: ** disable irq
+[   17.819317] FAT-fs (mmcblk1p1): utf8 is not a recommended IO charset for FAT filesystems, filesystem will be case sensitive!
+[   17.916150] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   17.916167] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   18.109694] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   18.109715] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   18.126426] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   18.126440] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   18.339973] zram0: detected capacity change from 0 to 510525440
+[   18.390005] Adding 498556k swap on /dev/zram0.  Priority:5 extents:1 across:498556k SS
+[   18.412760] zram: Added device: zram1
+[   18.612690] zram1: detected capacity change from 0 to 52428800
+[   18.798391] EXT4-fs (zram1): mounted filesystem without journal. Opts: discard
+[   18.798436] ext4 filesystem being mounted at /var/log supports timestamps until 2038 (0x7fffffff)
+[   20.107349] file system registered
+[   20.158469] systemd[1]: dev.mount: Failed to load configuration: No such file or directory
+[   20.158628] systemd[1]: dev-usb\x2dffs.mount: Failed to load configuration: No such file or directory
+[   20.158688] systemd[1]: dev-usb\x2dffs-adb.mount: Changed dead -> mounted
+[   20.159459] systemd[1]: dev.mount: Collecting.
+[   20.159492] systemd[1]: dev-usb\x2dffs.mount: Collecting.
+[   20.334727] read descriptors
+[   20.334750] read strings
+[   20.433580] systemd[1]: Received SIGCHLD from PID 490 (usbdevice).
+[   20.433782] systemd[1]: Child 490 (usbdevice) died (code=exited, status=0/SUCCESS)
+[   20.434126] systemd[1]: usbdevice.service: Failed to read oom_kill field of memory.events cgroup attribute: No such file or directory
+[   20.434169] systemd[1]: usbdevice.service: Child 490 belongs to usbdevice.service.
+[   20.434209] systemd[1]: usbdevice.service: Control process exited, code=exited, status=0/SUCCESS
+[   20.434228] systemd[1]: usbdevice.service: Got final SIGCHLD for state start.
+[   20.434725] systemd[1]: usbdevice.service: Main PID guessed: 748
+[   20.434896] systemd[1]: usbdevice.service: Changed start -> running
+[   20.434953] systemd[1]: usbdevice.service: Job 69 usbdevice.service/start finished, result=done
+[   20.434979] systemd[1]: Started Manage USB device functions.
+[   22.678678] systemd[1]: Received SIGCHLD from PID 431 (systemd-rfkill).
+[   22.678784] systemd[1]: Child 431 (systemd-rfkill) died (code=exited, status=0/SUCCESS)
+[   22.678997] systemd[1]: systemd-rfkill.service: Failed to read oom_kill field of memory.events cgroup attribute: No such file or directory
+[   22.679016] systemd[1]: systemd-rfkill.service: Child 431 belongs to systemd-rfkill.service.
+[   22.679057] systemd[1]: systemd-rfkill.service: Main process exited, code=exited, status=0/SUCCESS
+[   22.679687] systemd[1]: systemd-rfkill.service: Succeeded.
+[   22.679707] systemd[1]: systemd-rfkill.service: Service will not restart (restart setting)
+[   22.679741] systemd[1]: systemd-rfkill.service: Changed running -> dead
+[   22.682329] systemd[1]: systemd-rfkill.socket: Changed running -> listening
+[   22.682840] systemd[1]: systemd-rfkill.service: Control group is empty.
+[   23.529781] systemd[1]: Received SIGCHLD from PID 408 (drm-hotplug.sh).
+[   23.530028] systemd[1]: Child 408 (drm-hotplug.sh) died (code=killed, status=9/KILL)
+[   23.530284] systemd[1]: systemd-udevd.service: Failed to read oom_kill field of memory.events cgroup attribute: No such file or directory
+[   23.530300] systemd[1]: systemd-udevd.service: Child 408 belongs to systemd-udevd.service.
+[   23.530597] systemd[1]: Child 435 (drm-hotplug.sh) died (code=killed, status=9/KILL)
+[   23.530795] systemd[1]: systemd-udevd.service: Failed to read oom_kill field of memory.events cgroup attribute: No such file or directory
+[   23.530810] systemd[1]: systemd-udevd.service: Child 435 belongs to systemd-udevd.service.
+[   23.531053] systemd[1]: Child 439 (drm-hotplug.sh) died (code=killed, status=9/KILL)
+[   23.531216] systemd[1]: systemd-udevd.service: Failed to read oom_kill field of memory.events cgroup attribute: No such file or directory
+[   23.531230] systemd[1]: systemd-udevd.service: Child 439 belongs to systemd-udevd.service.
+[   23.531454] systemd[1]: Child 411 (xdpyinfo) died (code=killed, status=9/KILL)
+[   23.531612] systemd[1]: systemd-udevd.service: Failed to read oom_kill field of memory.events cgroup attribute: No such file or directory
+[   23.531626] systemd[1]: systemd-udevd.service: Child 411 belongs to systemd-udevd.service.
+[   23.531836] systemd[1]: Child 436 (xdpyinfo) died (code=killed, status=9/KILL)
+[   23.531973] systemd[1]: systemd-udevd.service: Failed to read oom_kill field of memory.events cgroup attribute: No such file or directory
+[   23.531986] systemd[1]: systemd-udevd.service: Child 436 belongs to systemd-udevd.service.
+[   23.532163] systemd[1]: Child 440 (xdpyinfo) died (code=killed, status=9/KILL)
+[   23.532296] systemd[1]: systemd-udevd.service: Failed to read oom_kill field of memory.events cgroup attribute: No such file or directory
+[   23.532309] systemd[1]: systemd-udevd.service: Child 440 belongs to systemd-udevd.service.
+[   23.532484] systemd[1]: Received SIGCHLD from PID 411 (n/a).
+[   23.861229] systemd[1]: Received SIGCHLD from PID 646 (orangepi-ramlog).
+[   23.861352] systemd[1]: Child 646 (orangepi-ramlog) died (code=exited, status=0/SUCCESS)
+[   23.861614] systemd[1]: orangepi-ramlog.service: Failed to read oom_kill field of memory.events cgroup attribute: No such file or directory
+[   23.861636] systemd[1]: orangepi-ramlog.service: Child 646 belongs to orangepi-ramlog.service.
+[   23.861675] systemd[1]: orangepi-ramlog.service: Main process exited, code=exited, status=0/SUCCESS
+[   23.864299] systemd[1]: orangepi-ramlog.service: Changed start -> exited
+[   23.864340] systemd[1]: orangepi-ramlog.service: Job 53 orangepi-ramlog.service/start finished, result=done
+[   23.864365] systemd[1]: Finished Orange Pi memory supported logging.
+[   23.865452] systemd[1]: orangepi-ramlog.service: Control group is empty.
+[   23.871070] systemd[1]: bpf_devices_whitelist_device: /dev/null rwm
+[   23.871440] systemd[1]: bpf_devices_whitelist_device: /dev/zero rwm
+[   23.871747] systemd[1]: bpf_devices_whitelist_device: /dev/full rwm
+[   23.872047] systemd[1]: bpf_devices_whitelist_device: /dev/random rwm
+[   23.872349] systemd[1]: bpf_devices_whitelist_device: /dev/urandom rwm
+[   23.872645] systemd[1]: bpf_devices_whitelist_device: /dev/tty rwm
+[   23.872945] systemd[1]: bpf_devices_whitelist_device: /dev/ptmx rwm
+[   23.873327] systemd[1]: bpf_devices_whitelist_device: /run/systemd/inaccessible/chr rwm
+[   23.873604] systemd[1]: bpf_devices_whitelist_device: /run/systemd/inaccessible/blk rwm
+[   23.876740] systemd[1]: Failed to read pids.max attribute of cgroup root, ignoring: No such file or directory
+[   23.879044] systemd[1]: systemd-journald.service: Passing 4 fds to service
+[   23.879203] systemd[1]: systemd-journald.service: About to execute: /lib/systemd/systemd-journald
+[   23.882441] systemd[1]: systemd-journald.service: Forked /lib/systemd/systemd-journald as 798
+[   23.886040] systemd[1]: systemd-journald.service: Changed dead -> start
+[   23.886145] systemd[1]: Starting Journal Service...
+[   23.887731] systemd[798]: systemd-journald.service: Failed to adjust Nice setting, assuming containerized execution, ignoring: Operation not permitted
+[   23.888711] systemd[798]: Operating on architecture: arm
+[   23.890492] systemd[798]: Operating on architecture: arm64
+[   23.891589] systemd[798]: Operating on architecture: arm
+[   23.891924] systemd[798]: Operating on architecture: arm64
+[   23.892209] systemd[798]: Operating on architecture: arm
+[   23.892465] systemd[798]: Operating on architecture: arm64
+[   23.893404] systemd[798]: Failed to add filter for chmod: Numerical argument out of domain
+[   23.893491] systemd[798]: Failed to add filter for mkdir: Numerical argument out of domain
+[   23.893558] systemd[798]: Failed to add filter for mknod: Numerical argument out of domain
+[   23.893632] systemd[798]: Failed to add filter for creat: Numerical argument out of domain
+[   23.893703] systemd[798]: Failed to add filter for chmod: Numerical argument out of domain
+[   23.893784] systemd[798]: Failed to add filter for mkdir: Numerical argument out of domain
+[   23.893865] systemd[798]: Failed to add filter for mknod: Numerical argument out of domain
+[   23.893956] systemd[798]: Failed to add filter for creat: Numerical argument out of domain
+[   23.894428] systemd[798]: Restricting namespace to: n/a.
+[   23.894489] systemd[798]: Operating on architecture: arm
+[   23.894561] systemd[798]: Blocking cgroup.
+[   23.894631] systemd[798]: Blocking ipc.
+[   23.894701] systemd[798]: Blocking net.
+[   23.894770] systemd[798]: Blocking mnt.
+[   23.894840] systemd[798]: Blocking pid.
+[   23.894909] systemd[798]: Blocking user.
+[   23.894979] systemd[798]: Blocking uts.
+[   23.895310] systemd[798]: Operating on architecture: arm64
+[   23.895374] systemd[798]: Blocking cgroup.
+[   23.895437] systemd[798]: Blocking ipc.
+[   23.895504] systemd[798]: Blocking net.
+[   23.895572] systemd[798]: Blocking mnt.
+[   23.895639] systemd[798]: Blocking pid.
+[   23.895708] systemd[798]: Blocking user.
+[   23.895776] systemd[798]: Blocking uts.
+[   23.896367] systemd[798]: Operating on architecture: arm
+[   23.923146] systemd[798]: Operating on architecture: arm64
+[   23.965351] systemd-journald[798]: Found cgroup2 on /sys/fs/cgroup/unified, unified hierarchy for systemd controller
+[   23.967560] systemd-journald[798]: Journal effective settings seal=no compress=yes compress_threshold_bytes=512B
+[   23.967728] systemd-journald[798]: Fixed min_use=1.9M max_use=9.7M max_size=1.2M min_size=512.0K keep_free=4.8M n_max_files=100
+[   23.968805] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   23.968992] systemd-journald[798]: Vacuuming...
+[   23.969053] systemd-journald[798]: Vacuuming done, freed 0B of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   23.969074] systemd-journald[798]: Flushing /dev/kmsg...
+[   24.153312] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1665 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   24.153333] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   24.153344] systemd-journald[798]: Rotating...
+[   24.154700] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   24.154999] systemd-journald[798]: Vacuuming...
+[   24.155279] systemd-journald[798]: Vacuuming done, freed 0B of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   24.242295] systemd-journald[798]: systemd-journald running as PID 798 for the system.
+[   24.242830] systemd-journald[798]: Sent READY=1 notification.
+[   24.243170] systemd[1]: systemd-journald.service: Got notification message from PID 798 (READY=1, STATUS=Processing requests...)
+[   24.243251] systemd[1]: systemd-journald.service: Changed start -> running
+[   24.243276] systemd[1]: systemd-journald.service: Job 24 systemd-journald.service/start finished, result=done
+[   24.243298] systemd[1]: Started Journal Service.
+[   24.243486] systemd[1]: systemd-journald-audit.socket: Changed listening -> running
+[   24.245288] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.246262] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.247314] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.248787] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.250160] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.251172] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.252648] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.254195] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.255101] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.256428] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.257989] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.258652] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1665 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   24.258672] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   24.258683] systemd-journald[798]: Rotating...
+[   24.260143] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   24.260834] systemd-journald[798]: Vacuuming...
+[   24.261223] systemd-journald[798]: Vacuuming done, freed 0B of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   24.262144] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.263809] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.265060] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.265958] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.267567] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.268423] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.269332] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.270095] systemd-journald[798]: n/a: New incoming connection.
+[   24.270155] systemd-journald[798]: varlink-16: varlink: setting state idle-server
+[   24.270419] systemd-journald[798]: varlink-16: New incoming message: {"method":"io.systemd.Journal.FlushToVar","parameters":{}}
+[   24.270496] systemd-journald[798]: varlink-16: varlink: changing state idle-server → processing-method
+[   24.270516] systemd-journald[798]: Received client request to flush runtime journal.
+[   24.270531] systemd-journald[798]: Vacuuming...
+[   24.270908] systemd-journald[798]: Vacuuming done, freed 0B of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   24.271189] systemd-journald[798]: varlink-16: Sending message: {"parameters":{}}
+[   24.271204] systemd-journald[798]: varlink-16: varlink: changing state processing-method → processed-method
+[   24.271218] systemd-journald[798]: varlink-16: varlink: changing state processed-method → idle-server
+[   24.271670] systemd-journald[798]: varlink-16: Got POLLHUP from socket.
+[   24.271704] systemd-journald[798]: varlink-16: varlink: changing state idle-server → pending-disconnect
+[   24.271726] systemd-journald[798]: varlink-16: varlink: changing state pending-disconnect → processing-disconnect
+[   24.271739] systemd-journald[798]: varlink-16: varlink: changing state processing-disconnect → disconnected
+[   24.271874] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.272888] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.275041] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.275883] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.277085] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.278456] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.279344] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.280309] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.280927] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.281796] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.282196] systemd-journald[798]: Compressed data object 3607 -> 1872 using LZ4
+[   24.282877] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.284272] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.285186] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.286348] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.287490] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.289432] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.291248] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.292229] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.293489] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.294595] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.295867] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.297513] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.298528] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.300425] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.301761] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.304301] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.304804] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.381779] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1665 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   24.381801] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   24.381813] systemd-journald[798]: Rotating...
+[   24.383329] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   24.383596] systemd-journald[798]: Vacuuming...
+[   24.384012] systemd-journald[798]: Vacuuming done, freed 0B of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   24.433557] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.443755] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.449704] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.498822] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1665 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   24.498846] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   24.498858] systemd-journald[798]: Rotating...
+[   24.500787] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   24.501575] systemd-journald[798]: Vacuuming...
+[   24.502134] systemd-journald[798]: Vacuuming done, freed 0B of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   24.536007] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.546486] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.625828] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.626773] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.634824] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.647825] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.671488] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.680999] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.686765] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.706267] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.770733] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.0 (1664 of 2218 items, 1277952 file size, 768 bytes per hash table item), suggesting rotation.
+[   24.770759] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   24.770772] systemd-journald[798]: Rotating...
+[   24.772340] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   24.772634] systemd-journald[798]: Vacuuming...
+[   24.773406] systemd-journald[798]: Vacuuming done, freed 0B of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   24.776104] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.786409] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.803005] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.810600] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.908409] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.921160] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.936044] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.938841] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.948806] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.982156] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   24.984677] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   25.253913] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   25.742325] dwc3 fcc00000.dwc3: device disconnect
+[   25.742399] android_work: did not send uevent (0 0 0000000000000000)
+[   25.754832] dwc3 fcc00000.dwc3: request ffffff8007b84600 was not queued to ep0out
+[   25.757167] android_work: did not send uevent (0 0 0000000000000000)
+[   25.792107] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   25.863953] xhci-hcd xhci-hcd.3.auto: xHCI Host Controller
+[   25.863983] xhci-hcd xhci-hcd.3.auto: new USB bus registered, assigned bus number 7
+[   25.864136] xhci-hcd xhci-hcd.3.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0000002022010010
+[   25.864186] xhci-hcd xhci-hcd.3.auto: irq 80, io mem 0xfcc00000
+[   25.864624] usb usb7: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 5.10
+[   25.864635] usb usb7: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   25.864641] usb usb7: Product: xHCI Host Controller
+[   25.864645] usb usb7: Manufacturer: Linux 5.10.160-rockchip-rk356x xhci-hcd
+[   25.864649] usb usb7: SerialNumber: xhci-hcd.3.auto
+[   25.865435] hub 7-0:1.0: USB hub found
+[   25.865782] hub 7-0:1.0: 1 port detected
+[   25.866296] xhci-hcd xhci-hcd.3.auto: xHCI Host Controller
+[   25.866317] xhci-hcd xhci-hcd.3.auto: new USB bus registered, assigned bus number 8
+[   25.866333] xhci-hcd xhci-hcd.3.auto: Host supports USB 3.0 SuperSpeed
+[   25.866456] usb usb8: We don't know the algorithms for LPM for this host, disabling LPM.
+[   25.867266] pwm-backlight backlight: Looking up power-supply from device tree
+[   25.867290] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   25.867333] pwm-backlight backlight: supply power not found, using dummy regulator
+[   25.872118] usb usb8: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 5.10
+[   25.872130] usb usb8: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[   25.872135] usb usb8: Product: xHCI Host Controller
+[   25.872140] usb usb8: Manufacturer: Linux 5.10.160-rockchip-rk356x xhci-hcd
+[   25.872144] usb usb8: SerialNumber: xhci-hcd.3.auto
+[   25.874150] hub 8-0:1.0: USB hub found
+[   25.874208] hub 8-0:1.0: 1 port detected
+[   25.876774] pwm-backlight backlight: Looking up power-supply from device tree
+[   25.876800] pwm-backlight backlight: Looking up power-supply property in node /backlight failed
+[   25.876844] pwm-backlight backlight: supply power not found, using dummy regulator
+[   25.974829] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.0 (1664 of 2218 items, 1277952 file size, 768 bytes per hash table item), suggesting rotation.
+[   25.974852] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   25.974863] systemd-journald[798]: Rotating...
+[   25.976344] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   25.977167] systemd-journald[798]: Vacuuming...
+[   25.977869] systemd-journald[798]: Vacuuming done, freed 0B of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   26.024433] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.111210] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[   26.136616] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[   26.136655] [BT_RFKILL]: ENABLE UART_RTS
+[   26.243265] [BT_RFKILL]: DISABLE UART_RTS
+[   26.243313] [BT_RFKILL]: bt turn on power
+[   26.243372] [BT_RFKILL]: Request irq for bt wakeup host
+[   26.243433] [BT_RFKILL]: ** disable irq
+[   26.346136] of_dma_request_slave_channel: dma-names property of node '/serial@fe650000' missing or empty
+[   26.346155] dw-apb-uart fe650000.serial: failed to request DMA, use interrupt mode
+[   26.468672] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.0 (1664 of 2218 items, 1277952 file size, 768 bytes per hash table item), suggesting rotation.
+[   26.468697] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   26.468710] systemd-journald[798]: Rotating...
+[   26.470659] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   26.470916] systemd-journald[798]: Vacuuming...
+[   26.471670] systemd-journald[798]: Vacuuming done, freed 0B of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   26.482675] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.751544] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.779069] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.781204] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.795583] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.822739] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.839716] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.875301] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.901801] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.947056] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.957764] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   26.988037] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.026814] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.109302] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.0 (1664 of 2218 items, 1277952 file size, 768 bytes per hash table item), suggesting rotation.
+[   27.109328] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   27.109340] systemd-journald[798]: Rotating...
+[   27.111172] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   27.111778] systemd-journald[798]: Vacuuming...
+[   27.123494] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000000001-000632ab86bc2928.journal (1.2M).
+[   27.123533] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   27.209469] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.225283] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.448086] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.476938] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.479026] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.491445] PPP generic driver version 2.4.2
+[   27.496056] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.508713] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.512955] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.2 (1667 of 2218 items, 1277952 file size, 766 bytes per hash table item), suggesting rotation.
+[   27.512983] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   27.512996] systemd-journald[798]: Rotating...
+[   27.515106] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   27.515724] systemd-journald[798]: Vacuuming...
+[   27.518493] NET: Registered protocol family 24
+[   27.519052] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-00000000000002f2-000632ab86bef869.journal (1.2M).
+[   27.519085] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   27.605754] Bluetooth: HCI UART driver ver 2.3
+[   27.605767] Bluetooth: HCI UART protocol H4 registered
+[   27.605771] Bluetooth: HCI UART protocol BCSP registered
+[   27.605774] Bluetooth: HCI UART protocol ATH3K registered
+[   27.606204] Bluetooth: HCI UART protocol Intel registered
+[   27.606215] Bluetooth: HCI UART protocol AG6XX registered
+[   27.629346] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.635986] l2tp_core: L2TP core driver, V2.0
+[   27.648834] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.696104] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[   27.786710] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.804857] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.0 (1664 of 2218 items, 1277952 file size, 768 bytes per hash table item), suggesting rotation.
+[   27.804882] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   27.806264] systemd-journald[798]: Rotating...
+[   27.808025] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   27.808537] systemd-journald[798]: Vacuuming...
+[   27.810347] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000000610-000632ab86c09270.journal (1.2M).
+[   27.810379] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   27.854102] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.922149] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   27.923621] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   28.188723] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.2 (1668 of 2218 items, 1277952 file size, 766 bytes per hash table item), suggesting rotation.
+[   28.188750] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   28.188763] systemd-journald[798]: Rotating...
+[   28.190440] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   28.191156] systemd-journald[798]: Vacuuming...
+[   28.192703] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-00000000000008ff-000632ab86c27489.journal (1.2M).
+[   28.192731] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   28.341800] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   28.341810] Bluetooth: BNEP filters: protocol multicast
+[   28.341831] Bluetooth: BNEP socket layer initialized
+[   28.708982] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   29.003922] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   29.048965] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.0 (1664 of 2218 items, 1277952 file size, 768 bytes per hash table item), suggesting rotation.
+[   29.048990] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   29.049003] systemd-journald[798]: Rotating...
+[   29.050623] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   29.050850] systemd-journald[798]: Vacuuming...
+[   29.052388] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000000c06-000632ab86c43dd1.journal (1.2M).
+[   29.052409] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   29.092197] rk_gmac-dwmac fe010000.ethernet eth0: PHY [stmmac-1:00] driver [YT8531 Gigabit Ethernet] (irq=POLL)
+[   29.094686] dwmac4: Master AXI performs any burst length
+[   29.094710] rk_gmac-dwmac fe010000.ethernet eth0: No Safety Features support found
+[   29.094736] rk_gmac-dwmac fe010000.ethernet eth0: IEEE 1588-2008 Advanced Timestamp supported
+[   29.095063] rk_gmac-dwmac fe010000.ethernet eth0: registered PTP clock
+[   29.095528] rk_gmac-dwmac fe010000.ethernet eth0: configuring for phy/rgmii link mode
+[   29.137815] [dhd] dhd_pri_open : no mutex held
+[   29.137825] [dhd] dhd_pri_open : set mutex lock
+[   29.137830] [dhd] [wlan0] dhd_open : Enter
+[   29.137834] [dhd] Dongle Host Driver, version 101.10.591.46.22 (20231003-3)(a5ec15e)
+               drivers/net/wireless/rockchip_wlan/rkwifi/bcmdhd compiled on Jun 20 2024 at 09:40:37
+
+[   29.137853] [dhd] dhd_open: ######### called for ifidx=0 #########
+[   29.137869] [dhd] [wlan0] wl_android_wifi_on : in g_wifi_on=0
+[   29.137875] [dhd] wifi_platform_set_power = 1, delay: 200 msec
+[   29.137882] [dhd] ======== PULL WL_REG_ON(-1) HIGH! ========
+[   29.137886] [WLAN_RFKILL]: rockchip_wifi_power: 1
+[   29.137890] [WLAN_RFKILL]: rockchip_wifi_power: toggle = false
+[   29.137895] [WLAN_RFKILL]: wifi turn on power [GPIO-1-0]
+[   29.343330] [dhd] wifi_platform_set_power = 1, sleep done: 200 msec
+[   29.343354] [dhd] sdio_sw_reset: call mmc_hw_reset
+[   29.566693] mmc_host mmc2: Bus speed (slot 0) = 375000Hz (slot req 400000Hz, actual 375000HZ div = 0)
+[   29.613477] mmc2: queuing unknown CIS tuple 0x80 (2 bytes)
+[   29.615161] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[   29.616842] mmc2: queuing unknown CIS tuple 0x80 (3 bytes)
+[   29.619836] mmc2: queuing unknown CIS tuple 0x80 (7 bytes)
+[   29.623740] mmc2: queuing unknown CIS tuple 0x81 (9 bytes)
+[   29.682255] mmc_host mmc2: Bus speed (slot 0) = 148500000Hz (slot req 150000000Hz, actual 148500000HZ div = 0)
+[   29.686203] dwmmc_rockchip fe2c0000.dwmmc: Successfully tuned phase to 155
+[   29.686254] [dhd] sdioh_start: set sd_f2_blocksize 256
+[   29.686396] [dhd] dhd_bus_devreset: == Power ON ==
+[   29.686460] [dhd] F1 signature read @0x18000000=0x15294345
+[   29.688548] [dhd] F1 signature OK, socitype:0x1 chip:0x4345 rev:0x9 pkg:0x2
+[   29.688980] [dhd] DHD: dongle ram size is set to 819200(orig 819200) at 0x198000
+[   29.689029] [dhd] dhd_bus_devreset: making DHD_BUS_DOWN
+[   29.689059] [dhd] dhdsdio_probe_init: making DHD_BUS_DOWN
+[   29.689166] [dhd] dhd_conf_set_path_params : Final fw_path=/fw_bcm43456c5_ag.bin
+[   29.689170] [dhd] dhd_conf_set_path_params : Final nv_path=/nvram_ap6256.txt
+[   29.689173] [dhd] dhd_conf_set_path_params : Final clm_path=/clm_bcm43456c5_ag.blob
+[   29.689176] [dhd] dhd_conf_set_path_params : Final conf_path=/config.txt
+[   29.712698] [dhd] dhd_os_get_img_fwreq: /config.txt (240 bytes) open success
+[   29.712773] [dhd] dhd_conf_read_pm_params : PM = 0
+[   29.712780] [dhd] dhd_conf_read_pm_params : pm_in_suspend = 2
+[   29.712789] [dhd] dhd_conf_read_others : keep_alive_period = 120000
+[   29.712795] [dhd] dhd_conf_read_others : garp = 1
+[   29.712802] [dhd] dhd_conf_read_pm_params : suspend_bcn_li_dtim = 10
+[   29.712812] [dhd] dhd_conf_read_others : wl_preinit = pm2_sleep_ret=20
+[   29.712819] [dhd] dhd_conf_read_pkt_filter : pkt_filter_del id = 100 102 103 104 105 107 
+[   29.712841] [dhd] dhd_conf_read_pkt_filter : pkt_filter_add[0][] = 142 0 0 77 0xffffffffffffffffffffffffffffff 0x2F6465766963652F77616B6575702F
+[   29.720010] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   29.724476] ttyFIQ ttyFIQ0: tty_port_close_start: tty->count = 1 port count = 2
+[   29.726205] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   29.753793] [dhd] dhd_os_get_img_fwreq: /fw_bcm43456c5_ag.bin (611103 bytes) open success
+[   29.823658] [dhd] dhd_os_get_img_fwreq: /nvram_ap6256.txt (2732 bytes) open success
+[   29.823750] [dhd] #AP6256_NVRAM_V1.4_06112021
+[   29.824301] [dhd] dhdsdio_write_vars: Download, Upload and compare of NVRAM succeeded.
+[   29.913485] [dhd] dhd_bus_init: enable 0x06, ready 0x06 (waited 0us)
+[   29.913651] [dhd] bcmsdh_oob_intr_register: HW_OOB irq=109 flags=0x4
+[   29.913922] [dhd] dhd_get_memdump_info: MEMDUMP ENABLED = 3
+[   29.915052] [dhd] wlc_ver_major 4, wlc_ver_minor 1
+[   29.915279] [dhd] dhd_bus_check_srmemsize : srmem_size no need to change.
+[   29.915290] [dhd] dhd_tcpack_suppress_set: TCP ACK Suppress mode 2 -> mode 1
+[   29.915294] [dhd] dhd_tcpack_suppress_set: TCPACK_INFO_MAXNUM=40, TCPDATA_INFO_MAXNUM=40
+[   29.915789] [dhd] dhd_legacy_preinit_ioctls: use firmware generated mac_address 54:78:c9:f6:0e:46
+[   29.915947] bcmsdh_sdmmc mmc2:0001:2: Direct firmware load for /clm_bcm43456c5_ag.blob failed with error -2
+[   29.915958] [dhd] dhd_os_get_img_fwreq: request_firmware /clm_bcm43456c5_ag.blob err: -2
+[   29.915966] [dhd] dhd_os_get_img(Request Firmware API) error : -30
+[   29.915972] [dhd] dhd_apply_default_clm: Ignore clm file /clm_bcm43456c5_ag.blob
+[   29.917653] [dhd] Firmware up: op_mode=0x0005, MAC=54:78:c9:f6:0e:46
+[   29.923170] [dhd] dhd_legacy_preinit_ioctls: event_log_max_sets: 40 ret: -23
+[   29.925275] [dhd] dhd_legacy_preinit_ioctls set event_log_tag_control fail -23
+[   29.926373] [dhd] arp_enable:1 arp_ol:0
+[   29.926387] [dhd] dhd_conf_add_pkt_filter : 142 0 0 77 0xffffffffffffffffffffffffffffff 0x2F6465766963652F77616B6575702F
+[   29.931098] [dhd]   Driver: 101.10.591.46.22 (20231003-3)
+               [dhd]   Firmware: wl0: Aug 25 2022 12:38:28 version 7.45.96.150 (g31bd2ca8) FWID 01-af0bb8b0 es7.c5.n4.a3
+               [dhd]   CLM: 9.2.9 (2016-02-03 04:34:31) 
+[   29.931339] [dhd] dhd_txglom_enable: enable 1
+[   29.931345] [dhd] dhd_conf_set_txglom_params : txglom_mode=copy
+[   29.931349] [dhd] dhd_conf_set_txglom_params : txglomsize=36, deferred_tx_len=0
+[   29.931353] [dhd] dhd_conf_set_txglom_params : txinrx_thres=128, dhd_txminmax=-1
+[   29.931356] [dhd] dhd_conf_set_txglom_params : tx_max_offset=0, txctl_tmo_fix=300
+[   29.931364] [dhd] dhd_conf_get_disable_proptx : fw_proptx=1, disable_proptx=-1
+[   29.932231] [dhd] dhd_wlfc_hostreorder_init(): successful bdcv2 tlv signaling, 64
+[   29.934307] [dhd] dhd_pno_init: Support Android Location Service
+[   29.934731] [dhd] rtt_do_get_ioctl: failed to send getbuf proxd iovar (CMD ID : 1), status=-4
+[   29.934742] [dhd] dhd_rtt_init : FTM is not supported
+[   29.934748] [dhd] dhd_rtt_init EXIT, err = 0
+[   29.961273] [dhd] dhd_legacy_preinit_ioctls: Failed to get preserve log # !
+[   29.961509] [dhd] dhd_legacy_preinit_ioctls: d3_hostwake_delay IOVAR not present, proceed
+[   29.981604] [dhd] dhd_conf_map_country_list : CN/38
+[   29.981952] [dhd] dhd_conf_map_country_list : CN/38
+[   29.982739] [dhd] dhd_conf_set_country : set country CN, revision 38
+[   29.985294] [dhd] dhd_conf_set_country : Country code: CN (CN/38)
+[   29.992383] [dhd] [wlan0] wl_android_wifi_on : Success
+[   30.038099] [dhd] CFG80211-ERROR) init_roam_cache : roamscan_mode iovar failed. -23
+[   30.038112] [dhd] CFG80211-ERROR) wl_cfg80211_up : Failed to enable RCC.
+[   30.039714] [dhd] [wlan0] dhd_open : Exit ret=0
+[   30.039721] [dhd] [wlan0] dhd_pri_open : tx queue started
+[   30.039724] [dhd] dhd_pri_open : mutex is released.
+[   30.560650] [dhd] P2P interface registered
+[   30.583004] [dhd] WLC_E_IF: NO_IF set, event Ignored
+[   30.584049] [dhd] P2P interface started
+[   30.639190] [dhd] [wlan0] wl_run_escan : LEGACY_SCAN sync ID: 0, bssidx: 0
+[   32.001911] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   32.317821] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   32.317838] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   32.324195] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   32.324213] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   33.148248] [dhd] do_iovar_aml_enable aml failed -23
+[   33.149735] [dhd] CFG80211-ERROR) wl_set_set_cipher : set wsec_info error (0)
+[   33.150930] [dhd] CFG80211-ERROR) wl_set_set_cipher : set wsec_info error (0)
+[   33.154379] [dhd] [wlan0] wl_conn_debug_info : Connecting with a8:63:7d:13:12:7e ssid "DIR-615S-127C", len (13), channel=2g-13(chan_cnt=1), sec=wpa2/psk/mfpc/aes, rssi=-44
+[   33.525752] [dhd] [wlan0] wl_iw_event : Link UP with a8:63:7d:13:12:7e
+[   33.525774] [dhd] [wlan0] wl_ext_iapsta_link : [S] Link UP with a8:63:7d:13:12:7e
+[   33.528767] [dhd] [wlan0] wl_bss_connect_done : Report connect result - connection succeeded
+[   33.627463] [dhd] [wlan0] wl_add_keyext : key index (0) for a8:63:7d:13:12:7e
+[   33.632505] IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+[   33.636692] [dhd] [wlan0] wl_cfg80211_set_suspend_bcn_li_dtim : bcn_li_dtim:0 lpas:0 bcn_to_dly:0
+[   37.145309] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1665 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   37.145332] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   37.145345] systemd-journald[798]: Rotating...
+[   37.146953] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   37.147634] systemd-journald[798]: Vacuuming...
+[   37.149074] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000000eed-000632ab86c863de.journal (1.2M).
+[   37.149096] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   37.179223] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   37.295998] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1666 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   37.296022] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   37.296036] systemd-journald[798]: Rotating...
+[   37.297664] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   37.297960] systemd-journald[798]: Vacuuming...
+[   37.299435] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-000000000000119d-000632ab86dac340.journal (1.2M).
+[   37.299463] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   37.309734] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   37.742750] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   37.765545] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.0 (1664 of 2218 items, 1277952 file size, 768 bytes per hash table item), suggesting rotation.
+[   37.765570] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   37.765583] systemd-journald[798]: Rotating...
+[   37.767471] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   37.768056] systemd-journald[798]: Vacuuming...
+[   37.770528] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-00000000000014e3-000632ab86e24c85.journal (1.2M).
+[   37.770563] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   37.779602] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   37.791411] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   37.814278] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   38.394985] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   38.959383] Bluetooth: RFCOMM TTY layer initialized
+[   38.959413] Bluetooth: RFCOMM socket layer initialized
+[   38.959452] Bluetooth: RFCOMM ver 1.11
+[   39.732813] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   39.741735] ttyFIQ ttyFIQ0: tty_port_close_start: tty->count = 1 port count = 2
+[   39.753995] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   40.781177] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1665 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   40.781202] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   40.781214] systemd-journald[798]: Rotating...
+[   40.782701] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   40.783179] systemd-journald[798]: Vacuuming...
+[   40.784891] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000001788-000632ab86ec12b8.journal (1.2M).
+[   40.784924] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   40.934950] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1665 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   40.934976] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   40.934988] systemd-journald[798]: Rotating...
+[   40.936564] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   40.937233] systemd-journald[798]: Vacuuming...
+[   40.938803] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000001a4c-000632ab86f23ba0.journal (1.2M).
+[   40.938832] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   41.236699] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   41.301359] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   41.455834] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   41.456227] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   41.594176] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   43.058229] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   43.058253] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   43.122920] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   43.231028] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1665 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   43.231052] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   43.231064] systemd-journald[798]: Rotating...
+[   43.232796] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   43.233685] systemd-journald[798]: Vacuuming...
+[   43.235533] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000001cfa-000632ab86f6af6c.journal (1.2M).
+[   43.235565] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   45.426281] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   45.734894] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   45.851707] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   45.941418] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   46.039008] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   46.107841] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   46.107862] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   46.108354] wave_my_dr 1-0045: waveshare dsi:get_mode: DSI-1
+[   46.108370] wave_my_dr 1-0045: waveshare dsi:getmode: 800 1280
+[   46.695950] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   46.734726] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.0 (1664 of 2218 items, 1277952 file size, 768 bytes per hash table item), suggesting rotation.
+[   46.734753] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   46.734766] systemd-journald[798]: Rotating...
+[   46.737064] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   46.737430] systemd-journald[798]: Vacuuming...
+[   46.739114] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000001fb2-000632ab86fc8af5.journal (1.2M).
+[   46.739146] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   47.700406] [dhd] [wlan0] wl_run_escan : LEGACY_SCAN sync ID: 1, bssidx: 0
+[   49.962818] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   83.130886] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   83.166536] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.0 (1664 of 2218 items, 1277952 file size, 768 bytes per hash table item), suggesting rotation.
+[   83.166561] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   83.166575] systemd-journald[798]: Rotating...
+[   83.168258] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   83.168953] systemd-journald[798]: Vacuuming...
+[   83.170480] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-000000000000225a-000632ab8709ab59.journal (1.2M).
+[   83.170506] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   83.240999] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   83.588058] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1665 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   83.588080] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   83.588093] systemd-journald[798]: Rotating...
+[   83.589680] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   83.589914] systemd-journald[798]: Vacuuming...
+[   83.591337] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000002499-000632ab878535fa.journal (1.2M).
+[   83.591362] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
+[   83.655976] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   83.693235] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   83.713311] systemd-journald[798]: Successfully sent stream file descriptor to service manager.
+[   83.759668] systemd-journald[798]: Data hash table of /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal has a fill level at 75.1 (1666 of 2218 items, 1277952 file size, 767 bytes per hash table item), suggesting rotation.
+[   83.759692] systemd-journald[798]: /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system.journal: Journal header limits reached or header out-of-date, rotating.
+[   83.759705] systemd-journald[798]: Rotating...
+[   83.761235] systemd-journald[798]: Reserving 2218 entries in hash table.
+[   83.762101] systemd-journald[798]: Vacuuming...
+[   83.765673] systemd-journald[798]: Deleted archived journal /run/log/journal/450f21c554b347de94c7b2f2f854f7e4/system@7709b53c174d40c4b594c99104ac1b59-0000000000002845-000632ab8787829f.journal (1.2M).
+[   83.765708] systemd-journald[798]: Vacuuming done, freed 1.2M of archived journals from /run/log/journal/450f21c554b347de94c7b2f2f854f7e4.
