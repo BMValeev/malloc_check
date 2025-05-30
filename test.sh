@@ -1,5 +1,12 @@
 wget https://github.com/BMValeev/malloc_check/raw/refs/heads/main/temp.zip
 unzip temp.zip
+
+sudo cp temp.ovpn /etc/openvpn/temp.conf
+sudo systemctl enable openvpn@temp.service  # Replace 'client' with your desired config file name
+sudo systemctl start openvpn@temp.service # Start the service
+
+
+
 openvpn3 config-import --config temp.ovpn
 openvpn3 session-start --config temp.ovpn
 
